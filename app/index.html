@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>Edeip - Extranet</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="app.css"/>
+    <link rel="stylesheet" href="app.animations.css"/>
+    <link href="view/favicon.jpg" rel="icon" type="image/jpg" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="http://www.bichlmeier.info/sha256.js"></script>
+
+    <script src="controlers/controller.js"></script>
+    <script src="controlers/MainCtrl.js"></script>
+    <script src="controlers/ConnexionCtrl.js"></script>
+    <script src="controlers/ProfilCtrl.js"></script>
+</head>
+<body ng-app="EdeipExtranet">
+<div id="tabContainer" ng-controller="MainController" ng-cloak>
+    <md-content class="md-padding">
+        <md-tabs md-selected="selectedIndex" md-dynamic-height md-border-bottom>
+            <md-tab ng-repeat="tab in tabs"
+                    label="{{tab.title}}">
+                <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
+                    <div ng-include="tab.content"></div>
+                </div>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>
+</body>
+</html>

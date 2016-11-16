@@ -1,0 +1,41 @@
+<div ng-controller="ProfilController">
+    <md-card flex="100">
+        <md-subheader class="md-no-sticky justify">Information générale</md-subheader>
+        <md-card-content>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Nom&nbsp;:</div>
+                    <div class="col-md-9 justify">{{sharedData.utilisateur.nom}}</div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Prénom&nbsp;:</div>
+                    <div class="col-md-9 justify">{{sharedData.utilisateur.prenom}}</div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Adresse&nbsp;:</div>
+                    <div class="col-md-9 justify">{{sharedData.utilisateur.adr1}}</div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20"></div>
+                    <div class="col-md-9 justify">{{sharedData.utilisateur.adr2}}</div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Code Postal&nbsp;:</div>
+                    <div class="col-md-9 justify">{{sharedData.utilisateur.cp}}</div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Ville&nbsp;:</div>
+                    <div class="col-md-9 justify">{{sharedData.utilisateur.ville}}</div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Mail&nbsp;:</div>
+                    <div class="col-md-9 justify">{{sharedData.utilisateur.mail}}</div>
+                </md-list-item>
+                <md-list-item ng-if="sharedData.utilisateur.eleve != null">
+                    <div class="col-md-2" flex="20">Date de naissance&nbsp;:</div>
+                    <div class="col-md-9 justify">{{sharedData.utilisateur.dateNaissance | date : 'dd/MM/yyyy'}}</div>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
+</div>
