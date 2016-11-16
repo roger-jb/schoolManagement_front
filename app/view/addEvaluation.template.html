@@ -1,0 +1,122 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 class="centrer">Evaluation</h3>
+    </div>
+    <fieldset>
+        <legend>Choisir une &eacute;valuation</legend>
+        <form>
+            <table>
+                <tr>
+                    <td>Classe</td>
+                    <td>
+                        <select id="selectNiveau">
+                            <option value=""></option>
+                            <!-- <option value='".$niv->getIdNiveau()."'>".$niv->getLibelleNiveau()."</option>"; -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Module</td>
+                    <td>
+                        <select id="selectMatiere">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&Eacute;valuation : </td>
+                    <td>
+                        <select id="selectEval" name="selectEval">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" id="btModif" name="modif" value="Modifier">&nbsp;&nbsp;
+                        <input type="submit" id="btCpt" name="cpt" value="G&eacute;rer Comp&eacute;tences">&nbsp;&nbsp;
+                        <input type="submit" id="btVerif" name="verif" value="G&eacute;rer les notes">
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+
+    <form <!-- method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data" -->
+        <fieldset>
+            <legend>Nouvelle &Eacute;valuation</legend>
+            <input name="idEval" type="hidden" value="">
+            <table width="100%">
+                <tr>
+                    <td><label for="addDate"> date de l'&eacute;valuation : </label></td>
+                    <td colspan="3"><input type="text" id="addDate" name="addDate"></td>
+                </tr>
+                <tr>
+                    <td><label for="addTitre"> titre de l'&eacute;valuation : </label></td>
+                    <td colspan="3"><input type="text" id="addTitre" name="addTitre"></td>
+                </tr>
+                <tr>
+                    <td width="20%"><label for="addNiveau"> Classe : </label></td>
+                    <td width="30%">
+                        <!--<?php
+								$niveaux = Niveau::getAll();
+								?> -->
+                        <select id="addNiveau" name="addNiveau">
+                            <option value=""></option>
+
+                            <!--<?php
+									foreach ($niveaux as $niveau) {
+										echo '<option value="' . $niveau->getIdNiveau() . '">' . $niveau->getLibelleNiveau() . '</option>';
+                            }
+                            ?> -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%"><label for="addMatiere"> Matiere : </label></td>
+                    <td width="30%">
+                        <select id="addMatiere" name="addMatiere">
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="typeEval">Type d'&eacute;valuation : </label></td>
+                    <td><select id="typeEval" name="addType">
+                        <option value=""></option>
+
+                        <!-- <?php
+									$typeEval = TypeEvaluation::getAll();
+									foreach ($typeEval as $te) {
+										echo '<option value="' . $te->getIdTypeEvaluation() . '">' . $te->getLibelleTypeEvaluation() . '</option>';
+                        }
+                        ?> -->
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="contenu">D&eacute;tail (Autre) : </label></td>
+                    <td>
+                        <input id="contenu" type="text" name="autreEval">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="addMax"> Note Max de l'&eacute;valuation : </label></td>
+                    <td colspan="3"><input type="text" id="addMax" name="addMax" value="20"></td>
+                </tr>
+                <tr>
+                    <td><label for="inputSujet"> Sujet PDF (5Mo Max) * :</label></td>
+                    <td><input id="inputSujet" type="file" name="fichierSujet"
+                               value="" style="width: 100%;"></td>
+                </tr>
+                <tr>
+                    <td><label for="inputCorrection"> Correction PDF (5Mo Max) * :</label></td>
+                    <td><input id="inputCorrection" type="file" name="fichierCorrection"
+                               value="" style="width: 100%;"></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" id="submitButton" name="btAjouter" value="Ajouter">
+        </fieldset>
+    </form>
+</div>
+<div style="clear: both"></div>
+</div>

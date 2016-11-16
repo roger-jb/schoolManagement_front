@@ -1,0 +1,66 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 class="centrer">Gestion des semestres</h3>
+    </div>
+
+    <table id="selectAction" style="width: 100%">
+        <tr>
+            <td>
+                <span id="newsemestre"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouveau semestre</span>
+            </td>
+            <td>
+                <div>
+                    semestre :
+                    <select id="selectsemestre" size="1" style="min-width: 200px">
+                        <option value=""></option>
+                        <!--
+                        <?php
+								$semestres = semestre::getAll();
+								foreach ($semestres as $semestre) {
+									echo '<option value="' . $semestre->getIdsemestre() . '">' . $semestre->getLibellesemestre() . '</option>';
+                        }
+                        ?> -->
+                    </select>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <fieldset style="width: 70%; margin: auto;">
+        <form> <!-- method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> -->
+            <table>
+                <tr>
+                    <td><input id="inputId" type="hidden" name="idsemestre"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputLibelle"> Libell&eacute; * :</label></td>
+                    <td><input id="inputLibelle" type="text" required name="libellesemestre"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputDateDebut"> Date d&eacute;but * :</label></td>
+                    <td><input id="inputDateDebut" type="text" required name="dateDebutsemestre"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputDateFin"> Date Fin * :</label></td>
+                    <td><input id="inputDateFin" type="text" required name="dateFinsemestre"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputDateFinComm"> Date limite de commentaire * :</label></td>
+                    <td><input id="inputDateFinComm" type="text" required name="dateFinCommentaire"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="submitButton" name="btSubmit" value="Valider"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <br/>
+</div>
+<div style="clear: both"></div>
+</div>

@@ -1,0 +1,87 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 id="pageTitle" class="centrer">Carnet de Liaison</h3>
+    </div>
+
+    <!--<?php
+			if ($utilisateur->estAdministrateur() || $utilisateur->estProfesseur() || $utilisateur->estResponsable()) {
+    ?> -->
+    <table id="selectAction" style="width: 100%">
+        <tr>
+            <td>
+                <span id="newMessageClick"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouveau Message</span>
+            </td>
+            <td>
+            </td>
+        </tr>
+
+    </table>
+    <br/>
+    <fieldset style="width: 70%; margin: auto; display: none;" id="newMessage">
+        <form><!-- method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" -->
+            <table>
+                <tr>
+                    <td><input id="inputIdReponse" type="hidden" name="idReponse"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td>Étudiant * :</td>
+                    <td>
+                        <select id="selectEleve" size="1" style="min-width: 200px" name="idEleve">
+                            <option value=""></option>
+
+                            <!-- <?php
+				$eleves = Eleve::getAllActif();
+				foreach ($eleves as $eleve) {
+					echo '<option value="' . $eleve->getIdEleve() . '">' . $eleve->getNomUtilisateur() . ' ' . $eleve->getPrenomUtilisateur() . '</option>';
+                            }
+                            ?> -->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Message * :</td>
+                    <td><textarea id="contenu" rows="10" cols="60" name="contenuCarnetLiaison" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="submitButton" name="btSubmit" value="Valider"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <br/>
+   <!-- <?php
+			$CarnetLiaisonAll = array ();
+			if ($utilisateur->estProfesseur() || $utilisateur->estResponsable()) {
+    $CarnetLiaisonAll = CarnetLiaison::getByIdRedacteur($utilisateur->getIdUtilisateur());
+    }
+    if ($utilisateur->estResponsable()){
+    $CarnetLiaisonAll = CarnetLiaison::getByEleves(Responsable::getById($utilisateur->getIdUtilisateur())->getEleves());
+    }
+    if ($utilisateur->estAdministrateur()) {
+    $CarnetLiaisonAll = CarnetLiaison::getAll();
+    }
+    foreach ($CarnetLiaisonAll as $carnetLiaison) {
+    ?> -->
+    <fieldset style="width: 80%; margin: auto;">
+
+        <legend>Message du <strong><!--<?php echo $carnetLiaison->afficheDateRedaction(); ?>--></strong> concernant <strong><!--<?php echo $carnetLiaison->getEleve()->getNomUtilisateur() . ' ' . $carnetLiaison->getEleve()->getPrenomUtilisateur(); ?> --></strong></legend>
+        Auteur : <!--<?php echo $carnetLiaison->getRedacteur()->getNomUtilisateur() . ' ' . $carnetLiaison->getRedacteur()->getPrenomUtilisateur(); ?>--></br>
+        Message : <br/><textarea rows="10" cols="60"  readonly></textarea>
+        <!--<?php
+				if ($carnetLiaison->estReponse()) {
+        ?>-->
+        <br/><span id="textReponse" class="reponse" idReponse="">Voir le Message anterieur.</span>
+        <div id="" style="display: none">
+            <br />
+            <fieldset id=">" style="width: 80%; margin: auto;">
+                <legend>Message du <strong><!--<?php echo $carnetLiaison->getReponse()->afficheDateRedaction(); ?>--></strong> concernant <strong><!--<?php echo $carnetLiaison->getReponse()->getEleve()->getNomUtilisateur() . ' ' . $carnetLiaison->getReponse()->getEleve()->getPrenomUtilisateur(); ?>--></strong></legend>
+                Auteur : <!--<?php echo $carnetLiaison->getReponse()->getRedacteur()->getNomUtilisateur() . ' ' . $carnetLiaison->getReponse()->getRedacteur()->getPrenomUtilisateur(); ?>--></br>
+                Message : <br/> <textarea rows="10" cols="60"  readonly><!--<?php echo $carnetLiaison->getReponse()->getContenuCarnetLiaison() ?>--></textarea>
+            </fieldset>
+        </div>
+        <br/>
+        <input type='submit' class="repondre" idcarnetliaison="" name='repondre' value='R&eacute;pondre'/>
+    </fieldset>
+    <br/>
+</div>
