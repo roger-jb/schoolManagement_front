@@ -1,0 +1,74 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 class="centrer">Assignation des Modules</h3>
+    </div>
+    <table id="selectAction" style="width: 100%">
+        <tr>
+            <td>
+                <div>
+                    Niveau :
+                    <select id="selectNiveau" size="1" style="min-width: 200px">
+                        <option value=""></option>
+                        <optgroup label="Initial"></optgroup>-->
+                        <option>B1</option>
+                        <option>B2</option>
+                        <option>B3</option>
+                        <option>I4</option>
+                        <option>I5</option>
+                        <optgroup label="Alternant"></optgroup>-->
+                        <option>B3</option>
+                        <option>I4</option>
+                        <option>I5</option>
+                       <!-- <?php
+                                $niveaux = Niveau::getAll();
+                                foreach ($niveaux as $niveau) {
+                                    echo '<option value="' . $niveau->getIdNiveau() . '">' . $niveau->getLibelleNiveau() . '</option>';
+                        }
+                        ?>-->
+                    </select>
+                </div>
+            </td>
+            <td>
+                Module
+                <select id="selectMatiere" size="1">
+                    <option value=""></option>
+                 <!--   <?php
+                            $matieres = Matiere::getAll();
+                            foreach ($matieres as $matiere){
+                                echo '<option value="' . $matiere->getIdMatiere() . '">' . $matiere->getLibelleMatiere() . '</option>';
+                    }
+                    ?>-->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Enseignant
+                <select id="selectProf" size="1">
+                 <!--   <option value=""></option>
+                    <?php
+                            $profs = Professeur::getAll();
+                            foreach ($profs as $prof){
+                                echo '<option value="' . $prof->getIdProfesseur() . '">' . $prof->getLibelleUtilisatur() . '</option>';
+                    }
+                    ?>-->
+                </select>
+            </td>
+            <td>
+                <span id="addCouple">Ajouter</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="delCouple">Supprimer</span>&nbsp;&nbsp;&nbsp;&nbsp;<span id="updateCouple">Changer professeur</span>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <fieldset style="width: 70%; margin: auto;">
+        <legend>Liste des modules assign&eacute;es au Niveau et leurs enseignants</legend>
+        <table>
+            <thead>
+            <tr><td>Module</td><td>Enseignant</td></tr>
+            </thead>
+            <tbody id="listeCouple">
+            </tbody>
+        </table>
+    </fieldset>
+    <br/>
+</div>

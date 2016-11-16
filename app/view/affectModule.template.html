@@ -1,0 +1,71 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 class="centrer">Affecter un module à un étudiant</h3>
+    </div>
+    <fieldset>
+        <legend>Choisir un &Eacute;tudiant</legend>
+        <table>
+            <tr>
+                <td>&Eacute;tudiant : </td>
+                <td>
+                    <select id="eleve">
+                        <option value=""></option>
+                       <!-- <?php
+                                $eleves = Eleve::getAllActif();
+                                foreach ($eleves as $eleve){
+                                    echo "<option value='".$eleve->getIdEleve()."'>".$eleve->getLibelleUtilisatur().'</option>';
+                        }
+                        ?>-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Niveau : </td>
+                <td>
+                    <select id="selectNiveau">
+                        <option value=''></option>
+                        <optgroup label="Initial"></optgroup>-->
+                        <option>B1</option>
+                        <option>B2</option>
+                        <option>B3</option>
+                        <option>I4</option>
+                        <option>I5</option>
+                        <optgroup label="Alternant"></optgroup>-->
+                        <option>B3</option>
+                        <option>I4</option>
+                        <option>I5</option>
+                      <!--  <?php
+                                $niveaux = Niveau::getAll();
+                                foreach ($niveaux as $niv){
+                                    //$niv = new Niveau();
+                                    echo '<option value="'.$niv->getIdNiveau().'">'.$niv->getLibelleNiveau().'</option>';
+                        }
+                        ?>-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Mati&egrave;re : </td>
+                <td>
+                    <select id="selectMatiere">
+                        <option value=""></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" class="submit" id="btAdd" name="ajouter" value="Ajouter">&nbsp;&nbsp;
+                    <input type="button" class="submit" id="btDel" name="retirer" value="Retirer">
+                </td>
+            </tr>
+        </table>
+
+    </fieldset>
+    <fieldset>
+        <legend>Liste des matieres de l'&eacute;tudiant</legend>
+        <div id="listeMatiere">
+
+        </div>
+    </fieldset>
+    <br>
+</div>

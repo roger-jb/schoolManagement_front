@@ -1,0 +1,143 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 class="centrer">Gestion des Utilisateurs</h3>
+    </div>
+
+    <table id="selectAction" style="width: 100%">
+        <tr>
+            <td>
+                <span id="newUser"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouvel Utilisateur</span>
+            </td>
+            <td>
+                <div>
+                    <label for="selectUtilisateur" >Statut Utilisateur :</label>
+                    <select id="selectUtilisateur" size="1" style="min-width: 200px">
+                        <option value=""></option>
+                       <!-- <optgroup label="Utilisateur Actif"></optgroup>-->
+                            <option>Actif</option>
+                            <option>Inactif</option>
+                       <!-- <?php
+                                $utilisateurActifs = Utilisateur::getAllActif();
+                                foreach ($utilisateurActifs as $user) {
+                                    //$user = new Utilisateur();
+                                    echo '<option value="' . $user->getIdUtilisateur() . '">' . $user->getNomUtilisateur() . ' ' . $user->getPrenomUtilisateur() . '</option>';
+                        }
+                        ?>
+                        <optgroup label="Utilisateur Inactif"></optgroup>
+                        <?php
+                                $utilisateurInactifs = Utilisateur::getAllInactif();
+                                foreach ($utilisateurInactifs as $user) {
+                                    //$user = new Utilisateur();
+                                    echo '<option value="' . $user->getIdUtilisateur() . '">' . $user->getNomUtilisateur() . ' ' . $user->getPrenomUtilisateur() . '</option>';
+                        }
+                        ?> -->
+                    </select>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <fieldset style="width: 70%; margin: auto;">
+        <form method="POST" action="">
+            <table>
+                <tr>
+                    <td><input id="inputId" type="hidden" name="idUtilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><input id="inputActive" type="hidden" name="activeUtilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputNom">Nom * :</label</td>
+                    <td><input id="inputNom" type="text" required name="nomUtilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputPrenom">Pr&eacute;nom * :</label></td>
+                    <td><input id="inputPrenom" type="text" required name="prenomUtilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputAdr1">Adresse :</label></td>
+                    <td><input id="inputAdr1" type="text" name="adr1Utilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputAdr2">compl&eacute;ment d'adresse :</label></td>
+                    <td><input id="inputAdr2" type="text" name="adr2Utilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputCp">Code postal :</label></td>
+                    <td><input id="inputCp" type="text" name="cpUtilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputVille">Ville :</label></td>
+                    <td><input id="inputVille" type="text" name="villeUtilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><label for="inputMail" >Mail :</label></td>
+                    <td><input id="inputMail" type="text" name="mailUtilisateur"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td>Fonction :</td>
+                    <td>
+                        <input id="inputFonctionAdministrateur" type="checkbox" multiple name="fonction[]"
+                               value="Administrateur"/> Administrateur<br/>
+                        <input id="inputFonctionProfesseur" type="checkbox" multiple name="fonction[]"
+                               value="Professeur"/> Enseignant<br/>
+                        <input id="inputFonctionResponsable" type="checkbox" multiple name="fonction[]"
+                               value="Responsable"/> Tuteur<br/>
+                        <input id="inputFonctionEleve" type="checkbox" multiple name="fonction[]"
+                               value="Eleve"/> &Eacute;tudiant<br/>
+                        Niveau de l'&Eacute;tudiant :
+                        <select id="inputNiveau" name="niveauEleve" size="1">
+                            <option value=''></option>
+                            <optgroup label="Initial"></optgroup>-->
+                            <option>B1</option>
+                            <option>B2</option>
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
+                            <optgroup label="Alternant"></optgroup>-->
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
+                           <!-- <?php
+                                    $niveaux = Niveau::getAll();
+                                    foreach ($niveaux as $niveau) {
+                                        echo "<option value='" . $niveau->getIdNiveau() . "'>" . $niveau->getLibelleNiveau() . "</option>";
+                            }
+                            ?>-->
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date de naissance :</td>
+                    <td><input type="text" id="dateNaissanceUtilisateur" name="dateNaissanceUtilisateur"></td>
+                </tr>
+                <tr>
+                    <td>Date de Inscription :</td>
+                    <td><input type="text" id="dateInscriptionUtilisateur" name="dateInscriptionUtilisateur">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Les champs suivis d'un * sont obligatoires</td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" id="submitButton" name="btSubmit" value="Valider"></td>
+                    <td><input type="submit" id="activeButton" name="btActive" value="Supprimer"></td>
+                </tr>
+
+
+            </table>
+        </form>
+    </fieldset>
+    <br/>
+</div>

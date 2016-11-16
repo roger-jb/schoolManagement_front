@@ -1,0 +1,71 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 class="centrer">Lien Tuteur - &Eacute;tudiant</h3>
+    </div>
+    <fieldset>
+        <legend>V&eacute;rification par &eacute;tudiant</legend>
+        <table id="selectAction" style="width: 100%">
+            <tr>
+                <td>&Eacute;tudiant</td>
+                <td>
+                    <select id="EleveSelect" name="EleveSelect">
+                        <option value=""></option>
+                       <!-- <?php
+								$eleves = Eleve::getAllActif();
+								foreach ($eleves as $e) {
+									echo "<option value='" . $e->getIdEleve() . "'>" . $e->getLibelleUtilisatur() . "</option>";
+                        }
+                        ?>-->
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <fieldset>
+            <legend>Liste des tuteurs li&eacute;s</legend>
+            <ul id="ResponsableSelect"></ul>
+        </fieldset>
+    </fieldset>
+    </br>
+    <fieldset>
+        <legend>Modification lien Tuteur/Etudiant</legend>
+        <table>
+            <tr>
+                <td style="width: 33%">&Eacute;tudiant</td>
+                <td>
+                    <select id="inputEleve" name="inputEleve">
+                        <option value=""></option>
+                       <!-- <?php
+								$eleves = Eleve::getAllActif();
+								foreach ($eleves as $e) {
+									echo "<option value='" . $e->getIdEleve() . "'>" . $e->getLibelleUtilisatur() . "</option>";
+                        }
+                        ?>-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Tuteur</td>
+                <td>
+                    <select id="inputResponsable" name="inputResponsable">
+                        <option value=""></option>
+                    <!--    <?php
+								$responsables = Responsable::getAllActif();
+								foreach ($responsables as $r) {
+									echo "<option value='" . $r->getIdResponsable() . "'>" . $r->getLibelleUtilisatur() . "</option>";
+                        }
+                        ?>-->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <span id="btAjouter">Ajouter</span>
+                    &nbsp;&nbsp;&nbsp;
+                    <span id="btSupprimer">Supprimer</span>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    <br/>
+</div>
