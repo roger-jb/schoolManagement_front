@@ -2,149 +2,149 @@
     <div class="titre_corps">
         <h3 class="centrer">Gestion des Utilisateurs</h3>
     </div>
-        <md-card-header-text>
-                <button type="button" class="btn btn-primary">Nouvel utilisateur</button>
-        </md-card-header-text>
-            <md-card-content>
-                <md-list>
-                    <md-list-item>
-                   <!-- <label for="selectUtilisateur" >Statut Utilisateur :</label>
-                    <select id="selectUtilisateur" size="1" style="min-width: 100px">
-                        <option value=""></option>
-                       <!-- <optgroup label="Utilisateur Actif"></optgroup>
-                            <option>Actif</option>
-                            <option>Inactif</option>
-                       <!-- <?php
-                                $utilisateurActifs = Utilisateur::getAllActif();
-                                foreach ($utilisateurActifs as $user) {
-                                    //$user = new Utilisateur();
-                                    echo '<option value="' . $user->getIdUtilisateur() . '">' . $user->getNomUtilisateur() . ' ' . $user->getPrenomUtilisateur() . '</option>';
-                        }
-                        ?>
-                        <optgroup label="Utilisateur Inactif"></optgroup>
-                        <?php
-                                $utilisateurInactifs = Utilisateur::getAllInactif();
-                                foreach ($utilisateurInactifs as $user) {
-                                    //$user = new Utilisateur();
-                                    echo '<option value="' . $user->getIdUtilisateur() . '">' . $user->getNomUtilisateur() . ' ' . $user->getPrenomUtilisateur() . '</option>';
-                        }
-                        ?>
-                    </select>-->
-                        </md-list-item>
-                    </md-list>
-                </md-card-content>
-         </md-list-item>
+    <md-card-header-text>
+        <button type="button" class="btn btn-primary">Nouvel utilisateur</button>
+    </md-card-header-text>
+    <md-card-content>
+        <md-list>
+            <md-list-item>
+                <!-- <label for="selectUtilisateur" >Statut Utilisateur :</label>
+                 <select id="selectUtilisateur" size="1" style="min-width: 100px">
+                     <option value=""></option>
+                    <!-- <optgroup label="Utilisateur Actif"></optgroup>
+                         <option>Actif</option>
+                         <option>Inactif</option>
+                    <!-- <?php
+                             $utilisateurActifs = Utilisateur::getAllActif();
+                             foreach ($utilisateurActifs as $user) {
+                                 //$user = new Utilisateur();
+                                 echo '<option value="' . $user->getIdUtilisateur() . '">' . $user->getNomUtilisateur() . ' ' . $user->getPrenomUtilisateur() . '</option>';
+                     }
+                     ?>
+                     <optgroup label="Utilisateur Inactif"></optgroup>
+                     <?php
+                             $utilisateurInactifs = Utilisateur::getAllInactif();
+                             foreach ($utilisateurInactifs as $user) {
+                                 //$user = new Utilisateur();
+                                 echo '<option value="' . $user->getIdUtilisateur() . '">' . $user->getNomUtilisateur() . ' ' . $user->getPrenomUtilisateur() . '</option>';
+                     }
+                     ?>
+                 </select>-->
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+    </md-list-item>
     <fieldset style="width: 70%; margin: auto;">
         <form method="POST" action="">
             <md-card flex="100">
                 <md-card-content>
                     <md-list>
-                     <md-list-item>
-                        <div class="col-md-9 justify"><input id="inputId" type="hidden" name="idUtilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-9 justify"><input id="inputActive" type="hidden" name="activeUtilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-2" flex="20"> Nom * :</div>
-                        <div class="col-md-9 justify"><input id="inputNom" type="text" required name="nomUtilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-2" flex="20">Prénom * :</div>
-                        <div class="col-md-9 justify"><input id="inputPrenom" type="text" required name="prenomUtilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-2" flex="20">Adresse :</div>
-                        <div class="col-md-9 justify"><input id="inputAdr1" type="text" name="adr1Utilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-2" flex="20">Complément d'adresse :</div>
-                        <div class="col-md-9 justify"><input id="inputAdr2" type="text" name="adr2Utilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-2" flex="20">Code postal :</div>
-                        <div class="col-md-9 justify"><input id="inputCp" type="text" name="cpUtilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-2" flex="20">Ville :</div>
-                        <div class="col-md-9 justify"><input id="inputVille" type="text" name="villeUtilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-2" flex="20">Mail :</div>
-                        <div class="col-md-9 justify"><input id="inputMail" type="text" name="mailUtilisateur"
-                                   value=""/></div>
-                     </md-list-item>
-                     <md-list-item>
-                        <div class="col-md-2">Fonction :</div>
-                        <div class="col-md-9 justify">
-                            <div class="checkbox col-md-9 justify">
-                            <label><input id="inputFonctionAdministrateur" type="checkbox" multiple name="fonction[]"
-                                   value="Administrateur"/> Administrateur</label></div>
-                            <div class="checkbox col-md-9 justify">
-                                <label><input id="inputFonctionProfesseur" type="checkbox" multiple name="fonction[]"
-                                              value="Administrateur"/> Enseignant</label></div>
-                            <div class="checkbox col-md-9 justify">
-                                <label><input id="inputFonctionResponsable" type="checkbox" multiple name="fonction[]"
-                                              value="Administrateur"/> Tuteur</label></div>
-                            <div class="checkbox col-md-9 justify">
-                                <label><input id="inputFonctionEleve" type="checkbox" multiple name="fonction[]"
-                                              value="Administrateur"/> &Eacute;tudiant</label></div>
-                            </div>
-                      </md-list-item>
-                        <md-list>
                         <md-list-item>
-                            Niveau de l'&Eacute;tudiant :
+                            <div class="col-md-9 justify"><input id="inputId" type="hidden" name="idUtilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-9 justify"><input id="inputActive" type="hidden" name="activeUtilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20"> Nom * :</div>
+                            <div class="col-md-9 justify"><input id="inputNom" type="text" required name="nomUtilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Prénom * :</div>
+                            <div class="col-md-9 justify"><input id="inputPrenom" type="text" required name="prenomUtilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Adresse :</div>
+                            <div class="col-md-9 justify"><input id="inputAdr1" type="text" name="adr1Utilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Complément d'adresse :</div>
+                            <div class="col-md-9 justify"><input id="inputAdr2" type="text" name="adr2Utilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Code postal :</div>
+                            <div class="col-md-9 justify"><input id="inputCp" type="text" name="cpUtilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Ville :</div>
+                            <div class="col-md-9 justify"><input id="inputVille" type="text" name="villeUtilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Mail :</div>
+                            <div class="col-md-9 justify"><input id="inputMail" type="text" name="mailUtilisateur"
+                                                                 value=""/></div>
+                        </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-2">Fonction :</div>
                             <div class="col-md-9 justify">
-                            <select id="inputNiveau" name="niveauEleve" size="1">
-                                <option value=''></option>
-                                <optgroup label="Initial"></optgroup>-->
-                                <option>B1</option>
-                                <option>B2</option>
-                                <option>B3</option>
-                                <option>I4</option>
-                                <option>I5</option>
-                                <optgroup label="Alternant"></optgroup>-->
-                                <option>B3</option>
-                                <option>I4</option>
-                                <option>I5</option>
-                               <!-- <?php
-                                        $niveaux = Niveau::getAll();
-                                        foreach ($niveaux as $niveau) {
-                                            echo "<option value='" . $niveau->getIdNiveau() . "'>" . $niveau->getLibelleNiveau() . "</option>";
-                                }
-                                ?>-->
-                            </select>
-</div>
-                    </md-list-item>
+                                <div class="checkbox col-md-9 justify">
+                                    <label><input id="inputFonctionAdministrateur" type="checkbox" multiple name="fonction[]"
+                                                  value="Administrateur"/> Administrateur</label></div>
+                                <div class="checkbox col-md-9 justify">
+                                    <label><input id="inputFonctionProfesseur" type="checkbox" multiple name="fonction[]"
+                                                  value="Administrateur"/> Enseignant</label></div>
+                                <div class="checkbox col-md-9 justify">
+                                    <label><input id="inputFonctionResponsable" type="checkbox" multiple name="fonction[]"
+                                                  value="Administrateur"/> Tuteur</label></div>
+                                <div class="checkbox col-md-9 justify">
+                                    <label><input id="inputFonctionEleve" type="checkbox" multiple name="fonction[]"
+                                                  value="Administrateur"/> &Eacute;tudiant</label></div>
+                            </div>
+                        </md-list-item>
+                        <md-list>
+                            <md-list-item>
+                                Niveau de l'&Eacute;tudiant :
+                                <div class="col-md-9 justify">
+                                    <select id="inputNiveau" name="niveauEleve" size="1">
+                                        <option value=''></option>
+                                        <optgroup label="Initial"></optgroup>-->
+                                        <option>B1</option>
+                                        <option>B2</option>
+                                        <option>B3</option>
+                                        <option>I4</option>
+                                        <option>I5</option>
+                                        <optgroup label="Alternant"></optgroup>-->
+                                        <option>B3</option>
+                                        <option>I4</option>
+                                        <option>I5</option>
+                                        <!-- <?php
+                                                 $niveaux = Niveau::getAll();
+                                                 foreach ($niveaux as $niveau) {
+                                                     echo "<option value='" . $niveau->getIdNiveau() . "'>" . $niveau->getLibelleNiveau() . "</option>";
+                                         }
+                                         ?>-->
+                                    </select>
+                                </div>
+                            </md-list-item>
                         </md-list>
                         <md-list>
-                 <md-list-item>
-                    <div class="col-md-2">Date de naissance :</div>
-                    <div class="col-md-9 justify"><input type="text" id="dateNaissanceUtilisateur" name="dateNaissanceUtilisateur"></div>
-                 </md-list-item>
+                            <md-list-item>
+                                <div class="col-md-2">Date de naissance :</div>
+                                <div class="col-md-9 justify"><input type="text" id="dateNaissanceUtilisateur" name="dateNaissanceUtilisateur"></div>
+                            </md-list-item>
 
-                 <md-list-item>
-                    <div class="col-md-2">Date de Inscription :</div>
-                    <div class="col-md-9 justify"><input type="text" id="dateInscriptionUtilisateur" name="dateInscriptionUtilisateur">
-                    </div>
-                 </md-list-item>
-                            </md-list>
-                 <md-list-item>
-                     <div class="col-md-9 justify">Les champs suivis d'un * sont obligatoires</div>
-                 </md-list-item>
+                            <md-list-item>
+                                <div class="col-md-2">Date de Inscription :</div>
+                                <div class="col-md-9 justify"><input type="text" id="dateInscriptionUtilisateur" name="dateInscriptionUtilisateur">
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <md-list-item>
+                            <div class="col-md-9 justify">Les champs suivis d'un * sont obligatoires</div>
+                        </md-list-item>
 
-                 <md-list-item>
-                    <div class="col-md-9 justify"><input type="submit" id="submitButton" name="btSubmit" value="Valider"></div>
-                    <div class="col-md-9 justify"><input type="submit" id="activeButton" name="btActive" value="Supprimer"></div>
-                 </md-list-item>
+                        <md-list-item>
+                            <div class="col-md-9 justify"><input type="submit" id="submitButton" name="btSubmit" value="Valider"></div>
+                            <div class="col-md-9 justify"><input type="submit" id="activeButton" name="btActive" value="Supprimer"></div>
+                        </md-list-item>
                     </md-list>
                 </md-card-content>
             </md-card>
