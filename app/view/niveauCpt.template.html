@@ -3,50 +3,55 @@
         <h3 class="centrer">Gestion des Niveaux de Comp&eacute;tence</h3>
     </div>
 
-    <table id="selectAction" style="width: 100%">
-        <tr>
-            <td>
+    <md-card-content>
+        <md-list>
+            <md-list-item>
                 <span id="newNiveauCpt"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouveau Niveau de Comp&eacute;tence</span>
-            </td>
-            <td>
-                <div>
-                    Niveau :
+            </md-list-item>
+            <md-list-item>
+                <div class="col-md-2" flex="20">Niveau : </div>
+                <div class="col-md-9 justify">
                     <select id="selectNiveauCpt" size="1" style="min-width: 200px">
                         <option value=""></option>
-
                         <!-- <option value="' . $niveauCpt->getIdNiveauCpt() + $niveauCpt->getLibelleNiveauCpt() -->
-
                     </select>
                 </div>
-            </td>
-        </tr>
-    </table>
-    </br>
-    <fieldset style="width: 70%; margin: auto;">
-
+            </md-list-item>
+        </md-list>
+    </md-card-content>
+    
+    <md-card>
         <!--<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> -->
 
         <form>
-            <table>
-                <tr>
-                    <td><input id="inputId" type="hidden" name="idNiveauCpt"
-                               value=""></td>
-                </tr>
-                <tr>
-                    <td><label for="inputCode">Code * :</label></td>
-                    <td><input id="inputCode" type="text" required name="codeNiveauCpt"
-                               value="">&nbsp;&nbsp;(1 seul caract&egrave;re)</td>
-                </tr>
-                <tr>
-                    <td><label for="inputLibelle">Libell&eacute; * :</label></td>
-                    <td><input id="inputLibelle" type="text" required name="libelleNiveauCpt"
-                               value=""></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" id="submitButton" name="btSubmit" value="Valider"></td>
-                </tr>
-            </table>
+            <md-card-content>
+                <md-list>
+                    <md-list-item><input id="inputId" type="hidden" name="idNiveauCpt" value=""></md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Code * : </div>
+                        <div class="col-md-9 justify">
+                            <input id="inputCode" type="text" required name="codeNiveauCpt" value="">&nbsp;&nbsp;(1 seul caract&egrave;re)
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Libellé * : </div>
+                        <div class="col-md-9 justify">
+                            <input id="inputLibelle" type="text" required name="libelleNiveauCpt" value="">
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">
+                            <input type="submit" id="submitButton" class="btn btn-success" name="btSubmit" value="Valider" >
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
         </form>
-    </fieldset>
-    <br/>
+    </md-card>
 </div>

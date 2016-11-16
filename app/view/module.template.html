@@ -3,46 +3,46 @@
         <h3 class="centrer">Gestion des Modules</h3>
     </div>
 
-    <table id="selectAction" style="width: 100%">
-        <tr>
-            <td>
-                <span id="newMatiere"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouveau Module</span>
-            </td>
-            <td>
-                <div>
-                    Module :
-                    <select id="selectMatiere" size="1" style="min-width: 200px">
-                        <option value=""></option>
-                      <!--  <?php
-                                $matieres = Matiere::getAll();
-                                foreach ($matieres as $matiere) {
-                                    echo '<option value="' . $matiere->getIdMatiere() . '">' . $matiere->getLibelleMatiere() . '</option>';
-                        }
-                        ?>-->
-                    </select>
-                </div>
-            </td>
-        </tr>
+        <md-card-content>
+            <md-list>
+                <md-list-item>
+                    <span id="newMatiere"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouveau Module</span>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Module : </div>
+                    <div class="col-md-9 justify">
+                        <select id="selectMatiere" size="1" style="min-width: 200px">
+                            <option value=""></option>
+                            <!--  <?php
+                                      $matieres = Matiere::getAll();
+                                      foreach ($matieres as $matiere) {
+                                          echo '<option value="' . $matiere->getIdMatiere() . '">' . $matiere->getLibelleMatiere() . '</option>';
+                              }
+                              ?>-->
+                        </select>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
 
-    </table>
-    </br>
-    <fieldset style="width: 70%; margin: auto;">
+    <md-card flex="100">
         <form method="POST" action="">
-            <table>
-                <tr>
-                    <td><input id="inputId" type="hidden" name="idMatiere"
-                               value=""></td>
-                </tr>
-                <tr>
-                    <td><label for="inputLibelle"> Libell&eacute; * :</label></td>
-                    <td><input id="inputLibelle" type="text" required name="libelleMatiere"
-                               value=""></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" id="submitButton" name="btSubmit" value="Valider"></td>
-                </tr>
-            </table>
+            <md-card-content>
+                <md-list>
+                    <md-list-item><input id="inputId" type="hidden" name="idMatiere" value=""></md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Libellé : </div>
+                        <div class="col-md-9 justify">
+                            <input id="inputLibelle" type="text" required name="libelleMatiere" value="">
+                            <input type="submit" class="btn btn-success "id="submitButton" name="btSubmit" value="Valider">
+                        </div>
+                        <div class="col-md-9 justify">
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
         </form>
-    </fieldset>
-    <br/>
+    </md-card>
 </div>
