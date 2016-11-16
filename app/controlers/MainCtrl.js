@@ -29,6 +29,7 @@
       // {title: 'Mon Profil', content: 'view/profil.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
       {title: 'Administration', content: 'view/utilisateur.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
       {title: 'Evaluation', content: 'view/niveauCpt.template.html', administrateur: true, professeur:true, responsable: false, eleve:false},
+      {title: 'Cursus', content: 'view/cursus.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
       {title: 'Publication', content: 'view/connexion.template.html', administrateur: true, professeur:true, responsable: true, eleve:true},
       {title: 'Bulletin', content: 'view/connexion.template.html', administrateur: true, professeur:true, responsable: false, eleve:false}
     ];
