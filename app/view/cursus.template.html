@@ -1,0 +1,48 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 class="centrer">Gestion des Cursus</h3>
+    </div>
+
+    <table id="selectAction" style="width: 100%">
+        <tr>
+            <td>
+                <span id="newModule"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouveau Cursus</span>
+            </td>
+            <td>
+                <div>
+                    Cursus :
+                    <select id="selectModule" size="1" style="min-width: 200px">
+                        <option value=""></option>
+                     <!--   <?php
+                                $modules = Module::getAll();
+                                foreach ($modules as $module) {
+                                    echo '<option value="' . $module->getIdModule() . '">' . $module->getLibelleModule() . '</option>';
+                        }
+                        ?>-->
+                    </select>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <fieldset style="width: 70%; margin: auto;">
+        <form method="POST" action="">
+            <table>
+                <tr>
+                    <td><input id="inputId" type="hidden" name="idModule"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td>Libell&eacute; * :</td>
+                    <td><input id="inputLibelle" type="text" required name="libelleModule"
+                               value=""></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" id="submitButton" name="btSubmit" value="Valider"></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+    <br/>
+</div>
