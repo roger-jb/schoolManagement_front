@@ -47,6 +47,7 @@ const USERS = {
       // var pwd = "1a2b8b8dbfc756bbfb6aa2609dae7e9286a989764595713ab9034f237016ae95";
       //var pwd = sha256_digest(this.pwd);
       $scope.sharedData.utilisateur = USERS[login];
+      localStorage.setItem('user', JSON.stringify($scope.sharedData.utilisateur));
       //$scope.sharedData.token = data.token;
       $scope.$parent.addTabs();
 

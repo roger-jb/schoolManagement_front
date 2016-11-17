@@ -23,8 +23,14 @@
 
 <!--<div ng-include="'view/module.template.html'"></div>-->
 <div id="tabContainer" ng-controller="MainController" ng-cloak>
+    <div id="banner">
+        <img src="view/favicon.jpg"/>
+            <a href="#" ng-click="disconnect()">Se déconnecter</a>
+    </div>
     <md-content class="md-padding">
         <md-tabs md-selected="selectedIndex" md-dynamic-height md-border-bottom>
+            // LOGO
+
             <md-tab ng-repeat="tab in tabs"
                     label="{{tab.title}}">
                 <div class="demo-tab tab{{$index}} {{tab.id}}" style="padding: 25px; text-align: center;">
@@ -38,6 +44,8 @@
                     </div>
                 </div>
             </md-tab>
+
+
         </md-tabs>
     </md-content>
 </div>
