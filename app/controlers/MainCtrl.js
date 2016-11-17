@@ -86,11 +86,7 @@
                 },{
                     title: 'Classes',
                     content: 'view/niveau.template.html'
-                },
-                    {
-                        title: 'Relations Tuteurs/Etudiants',
-                        content: 'view/etudiantTuteur.template.html'
-                    }
+                }
                 ]
             },
 
