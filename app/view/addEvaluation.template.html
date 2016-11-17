@@ -1,17 +1,25 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Evaluation</h3>
+        <h3 class="centrer">Évaluation</h3>
     </div>
     <md-card flex="100">
-        <md-card-header-text>
-            <span class="md-title md-no-sticky">Choisir une &eacute;valuation</span>
+        <md-card-header-text>Choisir une &eacute;valuation
             <md-card-content>
                 <md-list>
                     <md-list-item>
                         <div class="col-md-2" flex="20">Classe :</div>
                         <div class="col-md-9 justify"><select id="selectNiveau">
-                            <option value=""></option>
-                            <!-- <option value='".$niv->getIdNiveau()."'>".$niv->getLibelleNiveau()."</option>"; -->
+                            <option value=''></option>
+                            <optgroup label="Initial"></optgroup>-->
+                            <option>B1</option>
+                            <option>B2</option>
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
+                            <optgroup label="Alternant"></optgroup>-->
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
                         </select>
                         </div>
                     </md-list-item>
@@ -21,22 +29,17 @@
                         <div class="col-md-2" flex="20">Module :</div>
                         <div class="col-md-9 justify"><select id="selectMatiere">
                             <option value=""></option>
+                            <option value="">Gouvernance du S.I</option>
+                            <option value="">Gestion de projet agile</option>
+                            <option value="">Gestion des Risques</option>
                         </select>
                         </div>
                     </md-list-item>
                 </md-list>
-                <md-list>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Evaluation :</div>
-                        <div class="col-md-9 justify"><select id="selectEval" name="selectEval">
-                            <option value=""></option>
-                        </select>
-                        </div>
-                    </md-list-item>
                 </md-list>
-                <input type="submit" id="btModif" name="modif" value="Modifier">&nbsp;&nbsp;
-                <input type="submit" id="btCpt" name="cpt" value="G&eacute;rer Comp&eacute;tences">&nbsp;&nbsp;
-                <input type="submit" id="btVerif" name="verif" value="G&eacute;rer les notes">
+                <input type="submit" class="btn btn-primary" id="btModif" name="modif" value="Modifier">&nbsp;&nbsp;
+                <input type="submit" class="btn btn-primary" id="btCpt" name="cpt" value="G&eacute;rer Comp&eacute;tences">&nbsp;&nbsp;
+                <input type="submit" class="btn btn-primary" id="btVerif" name="verif" value="G&eacute;rer les notes">
             </md-card-content>
         </md-card-header-text>
     </md-card>
@@ -44,18 +47,18 @@
     <!-- method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data" -->
     <md-card flex="100">
         <md-card-content>
-            <md-card-header-text>Nouvelle &Eacute;valuation
+            <md-card-header-text>Nouvelle évaluation
 
                 <div name="idEval" type="hidden" value="" style="width: 100%"></div>
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-2" flex="20">Date de l'évaluation :</div>
+                        <div class="col-md-2" flex="20">Date :</div>
                         <div class="col-md-9 justify"><input type="text" id="addDate" name="addDate"></div>
                     </md-list-item>
                 </md-list>
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-2" flex="20">Titre de l'évaluation :</div>
+                        <div class="col-md-2" flex="20">Titre :</div>
                         <div class="col-md-9 justify"><input type="text" id="addTitre" name="addTitre"></div>
                     </md-list-item>
                 </md-list>
@@ -63,74 +66,65 @@
                     <md-list-item>
                         <div class="col-md-2" flex="20">Classe :</div>
                         <div class="col-md-9 justify">
-                            <!--<?php
-                                    $niveaux = Niveau::getAll();
-                                    ?> -->
                             <select id="addNiveau" name="addNiveau">
-                                <option value=""></option>
-
-                                <!--<?php
-                                        foreach ($niveaux as $niveau) {
-                                            echo '<option value="' . $niveau->getIdNiveau() . '">' . $niveau->getLibelleNiveau() . '</option>';
-                                }
-                                ?> -->
+                                <option value=''></option>
+                                <optgroup label="Initial"></optgroup>-->
+                                <option>B1</option>
+                                <option>B2</option>
+                                <option>B3</option>
+                                <option>I4</option>
+                                <option>I5</option>
+                                <optgroup label="Alternant"></optgroup>-->
+                                <option>B3</option>
+                                <option>I4</option>
+                                <option>I5</option>
                             </select>
                         </div>
                     </md-list-item>
                 </md-list>
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-2" flex="20">Matière :</div>
+                        <div class="col-md-2" flex="20">Module :</div>
                         <div class="col-md-9 justify"><select id="addMatiere" name="addMatiere">
                             <option value=""></option>
+                            <option value="">Gouvernance du S.I</option>
+                            <option value="">Gestion de projet agile</option>
+                            <option value="">Gestion des Risques</option>
                         </select>
                         </div>
                     </md-list-item>
                 </md-list>
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-2" flex="20">Type d'évaluation :</div>
+                        <div class="col-md-2" flex="20">Type :</div>
                         <div class="col-md-9 justify"><select id="typeEval" name="addType">
                             <option value=""></option>
-
-                            <!-- <?php
-                                        $typeEval = TypeEvaluation::getAll();
-                                        foreach ($typeEval as $te) {
-                                            echo '<option value="' . $te->getIdTypeEvaluation() . '">' . $te->getLibelleTypeEvaluation() . '</option>';
-                            }
-                            ?> -->
+                            <option value="test">Test</option>
+                            <option value="tp">TP</option>
+                            <option value="projet">Projet</option>
                         </select>
                         </div>
                     </md-list-item>
                 </md-list>
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-2" flex="20">Détail (autre) :</div>
-                        <div class="col-md-9 justify"><input id="contenu" type="text" name="autreEval">
-                        </div>
-                    </md-list-item>
-                </md-list>
-                <md-list>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Note maximum de l'évaluation :</div>
+                        <div class="col-md-2" flex="20">Note maximum :</div>
                         <div class="col-md-9 justify"><input type="text" id="addMax" name="addMax" value="20"></div>
                     </md-list-item>
                 </md-list>
                 <md-list>
                     <md-list-item>
                         <div class="col-md-2" flex="20"> Sujet PDF (5Mo Max) * :</div>
-                        <div class="col-md-9 justify"><input id="inputSujet" type="file" name="fichierSujet"
-                                                             value="" style="width: 100%;"></div>
+                        <div class="col-md-9 justify"><input id="inputSujet" type="file" name="fichierSujet" value="" style="width: 100%;"></div>
                     </md-list-item>
                 </md-list>
                 <md-list>
                     <md-list-item>
                         <div class="col-md-2" flex="20"> Correction PDF (5Mo Max) * :</div>
-                        <div class="col-md-9 justify"><input id="inputCorrection" type="file" name="fichierCorrection"
-                                                             value="" style="width: 100%;"></div>
+                        <div class="col-md-9 justify"><input id="inputCorrection" type="file" name="fichierCorrection" value="" style="width: 100%;"></div>
                     </md-list-item>
                 </md-list>
-                <input type="submit" id="submitButton" name="btAjouter" value="Ajouter">
+                <input type="submit" class="btn btn-success" id="submitButton" name="btAjouter" value="Ajouter">
             </md-card-header-text>
         </md-card-content>
     </md-card>

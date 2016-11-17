@@ -3,17 +3,10 @@
         <h3 id="pageTitle" class="centrer">Carnet de Liaison</h3>
     </div>
 
-    <md-content>
-        <md-list>
-            <md-list-item>
-                <span id="newMessageClick"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouveau Message</span>
-            </md-list-item>
-            <md-list-item>
-            </md-list-item>
-        </md-list>
-    </md-content>
-
     <md-card>
+        <md-card-title>
+            Nouveau message
+        </md-card-title>
         <form>
             <table>
                 <md-list>
@@ -21,14 +14,17 @@
                         <div class="col-md-2" flex="20"> Étudiant :</div>
                         <div class="col-md-9 justify">
                             <select id="selectEleve" size="1" style="min-width: 200px" name="idEleve">
-                                <option value=""></option>
+                                <option value="">Reynard Jérémy</option>
+                                <option value="">Taïsse Sonia</option>
+                                <option value="">Sempé Jean-Baptiste</option>
+                                <option value="">Roger Jean-Baptiste</option>
                             </select>
                         </div>
                     </md-list-item>
                 </md-list>
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-2" flex="20"> Message * :</div>
+                        <div class="col-md-2" flex="20"> Message :</div>
                         <div class="col-md-9 justify">
                             <textarea id="contenu" rows="10" cols="60" name="contenuCarnetLiaison" required></textarea>
                         </div>
@@ -48,23 +44,33 @@
     <md-card>
 
         <md-card-title>
-            Message du :
-            Auteur :
-            Message : <textarea rows="10" cols="60"  readonly></textarea>
+            Anciens messages
         </md-card-title>
-    </md-card>
 
-    <md-card>
-        <span id="textReponse" class="reponse" idReponse="">Voir le Message anterieur.</span>
-        <div id="" style="display: none">
-            <md-card>
-                <md-card-title>
-                    Message du
-                    Auteur :
-                    Message <textarea rows="10" cols="60"  readonly></textarea>
-                </md-card-title>
-            </md-card>
-        </div>
-        <input type='submit' idcarnetliaison="" name='repondre' class="btn btn-primary" value='Répondre'/>
+        <md-list>
+            <md-list-item>
+                <div class="col-md-2" flex="20"> Message :</div>
+                <div class="col-md-9 justify">
+                    <textarea rows="10" cols="60" name="contenuCarnetLiaison" required>Rendez-vous EPSI / Entreprise le 15/11/2016</textarea>
+                </div>
+            </md-list-item>
+            <md-list-item>
+                <div class="col-md-2" flex="20"> Auteur :</div>
+                <div class="col-md-9 justify">
+                    <input type="text" id="addDate" name="addDate" value="Administration EPSI">
+                </div>
+            </md-list-item>
+            <md-list-item>
+                <div class="col-md-2" flex="20"> Date :</div>
+                <div class="col-md-9 justify">
+                    <input type="Date" id="" name="addDate" value="28/10/2016">
+                </div>
+            </md-list-item>
+        </md-list>
+        <md-list-item>
+            <div class="col-md-2" flex="20">
+                <input type='submit' idcarnetliaison="" name='repondre' class="btn btn-primary" value='Répondre'/>
+            </div>
+        </md-list-item>
     </md-card>
 </div>

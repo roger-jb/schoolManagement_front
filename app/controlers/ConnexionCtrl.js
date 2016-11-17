@@ -75,6 +75,7 @@ const USERS = {
           })
           .success(function (dataUtilisateur, statusUtilisateur, headersUtilisateur, configUtilisateur) {
             console.log(dataUtilisateur);
+            localStorage.setItem("name");
             $scope.sharedData.utilisateur = dataUtilisateur.data.utilisateur;
             $scope.sharedData.token = data.token;
             $scope.$parent.addTabs();

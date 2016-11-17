@@ -1,154 +1,109 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Evaluation</h3>
+        <h3 class="centrer">Évaluation</h3>
     </div>
-    <a href="../Intranet/addEvaluation.php">Retour au choix d'&eacute;valuation</a>
-
-    <form> <!-- method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data"> -->
-
         <md-card flex="100">
-            <md-card-title>
-                <input id="idEval" name="idEval" type="hidden" value="">
-                <md-card-content>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Date de l'évaluation : </div>
-                            <div class="col-md-9 justify">
-                                <input type="text" id="addDate" name="addDate" value="">
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Titre de l'évaluation </div>
-                            <div class="col-md-9 justify">
-                                <input type="text" id="addTitre" name="addTitre" value="">
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Classe</div>
-                            <div class="col-md-9 justify">
-                                <select id="addNiveau" name="addNiveau">
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                        </md-list-item>
-                            <!--<?php
-								$niveaux = Niveau::getAll();
-								?>
-                            <select id="addNiveau" name="addNiveau">
-                                <option value=""></option>
-                                <!--
-                                <?php
-                                        foreach ($niveaux as $niveau) {
-                                            echo '<option value="' . $niveau->getIdNiveau() . '"'.($evaluation->getMatiereNiveau()->getNiveau()->getIdNiveau()==$niveau->getIdNiveau()?'selected':'').'>' . $niveau->getLibelleNiveau() . '</option>';
-                                }
-                                ?>
-                            </select> -->
-                    </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Matière</div>
-                            <div class="col-md-9 justify">
-                                <select id="addMatiere" name="addMatiere">
-                                    <option value=""></option>
-                                    <!--
-                                    <?php
-                                            $matieres = Matiere::getByNiveau($evaluation->getMatiereNiveau()->getNiveau()->getIdNiveau());
-                                    foreach ($matieres as $matiere){
-                                    echo '<option value="' . $matiere->getIdMatiere() . '"'.($evaluation->getMatiereNiveau()->getMatiere()->getIdMatiere()==$matiere->getIdMatiere()?'selected':'').'>' . $matiere->getLibelleMatiere() . '</option>';
-                                    }
-                                    ?> -->
-                                </select>
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Type d'évaluation</div>
-                            <div class="col-md-9 justify">
-                                <select id="typeEval" name="addType">
-                                    <option value=""></option>
-                                    <!--
-                                    <?php
-                                                $typeEval = TypeEvaluation::getAll();
-                                                foreach ($typeEval as $te) {
-                                                    echo '<option value="' . $te->getIdTypeEvaluation() . '" ' . ($evaluation->getIdTypeEvaluation() == $te->getIdTypeEvaluation() ? 'selected' : '') . ' >' . $te->getLibelleTypeEvaluation() . '</option>';
-                                    }
-                                    ?> -->
-                                </select>
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Détail (type Autre uniquement):</div>
-                            <div class="col-md-9 justify">
-                                <input id="contenu" type="text" name="autreEval" value="">
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Note max de l'évaluation</div>
-                            <div class="col-md-9 justify">
-                                <input type="text" id="addMax" name="addMax" value="20">
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                    <!--
-                    <?php
-                            if (file_exists('../Evaluation/Sujet' . $evaluation->getIdEvaluation() . '.pdf')) {
-                    ?> -->
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">
-                                Il existe un sujet pour cette &eacute;valuation.
-                                <span id="delSujet" style="color: orange">supprimer</span>&nbsp;&nbsp;<a href="../Evaluation/Sujet.pdf">Visualiser</a>
-                            </div>
-                        </md-list-item>
-                    </md-list>
+            <md-card-header-text>Modification d'une évaluation
+                    <input id="idEval" name="idEval" type="hidden" value="">
+                <form>
+                    <md-card-content>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Date : </div>
+                                <div class="col-md-9 justify">
+                                    <input type="text" id="addDate" name="addDate" value="17/11/2016">
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Titre : </div>
+                                <div class="col-md-9 justify">
+                                    <input type="text" id="addTitre" name="addTitre" value="Mise en place ERP">
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Classe :</div>
+                                <div class="col-md-9 justify">
+                                    <select id="addNiveau" name="addNiveau">
+                                        <optgroup label="Alternant"></optgroup>
+                                        <option>I5</option>
+                                    </select>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Module :</div>
+                                <div class="col-md-9 justify">
+                                    <select id="addMatiere" name="addMatiere">
+                                        <option value="">ERP</option>
+                                    </select>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Type :</div>
+                                <div class="col-md-9 justify">
+                                    <select id="typeEval" name="addType">
+                                        <option value="">Projet</option>
+                                    </select>
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Note maximum :</div>
+                                <div class="col-md-9 justify">
+                                    <input type="number" id="addMax" name="addMax" value="20" min="5">
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">
+                                    Sujet pour cette &eacute;valuation.
+                                    <span id="delSujet" style="color: orange">Dupprimer</span>&nbsp;&nbsp;<a href="../Evaluation/Sujet.pdf">Visualiser</a>
+                                </div>
+                            </md-list-item>
+                        </md-list>
 
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Sujet PDF (5Mo Max) * :</div>
-                            <div class="col-md-9 justify">
-                                <input id="inputSujet" type="file" name="fichierSujet" value="" style="width: 100%;">
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                    <!--
-                    <?php
-                            if (file_exists('../Evaluation/Corrige' . $evaluation->getIdEvaluation() . '.pdf')) {
-                    ?> -->
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Il existe un corrig&eacute; pour cette &eacute;valuation.
-                                <span id="delCorrige" style="color: orange">supprimer</span>&nbsp;&nbsp;<a href="../Evaluation/Corrige.pdf">Visualiser</a></div>
-                        </md-list-item>
-                    </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Sujet PDF (5Mo Max) * :</div>
+                                <div class="col-md-9 justify">
+                                    <input id="inputSujet" type="file" name="fichierSujet" value="" style="width: 100%;">
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Corrig&eacute; pour cette &eacute;valuation.
+                                    <span id="delCorrige" style="color: orange">Supprimer</span>&nbsp;&nbsp;<a href="../Evaluation/Corrige.pdf">Visualiser</a></div>
+                            </md-list-item>
+                        </md-list>
 
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Correction PDF (5Mo Max) * :</div>
-                            <div class="col-md-9 justify">
-                                <input id="inputCorrection" type="file" name="fichierCorrection" value="" style="width: 100%;">
-                            </div>
-                        </md-list-item>
-                    </md-list>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">Correction PDF (5Mo Max) * :</div>
+                                <div class="col-md-9 justify">
+                                    <input id="inputCorrection" type="file" name="fichierCorrection" value="" style="width: 100%;">
+                                </div>
+                            </md-list-item>
+                        </md-list>
 
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">
-                                <input type="submit" id="submitButton" class="btn btn-default" value="Modifier">
-                            </div>
-                        </md-list-item>
-                    </md-list>
-
-                </md-card-content>
-            </md-card-title>
+                        <md-list>
+                            <md-list-item>
+                                <div class="col-md-2" flex="20">
+                                    <input type="submit" id="submitButton" class="btn btn-success" value="Valider">
+                                </div>
+                            </md-list-item>
+                        </md-list>
+                    </md-card-content>
+                    </form>
+                </md-card-header-text>
         </md-card>
-    </form>
 </div>

@@ -1,30 +1,26 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Gestion des Niveaux</h3>
+        <h3 class="centrer">Gestion des classes</h3>
     </div>
 
     <md-card flex="100">
             <md-card-content>
                 <div id="selectAction" style="width: 100%"></div>
-
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-2 justify"></div>
-                        <div class="col-md-9 justify">
-                            <span id="newNiveau"><button type="button" class="btn btn-primary"> Nouveau Niveau</button></span>
-                        </div>
-                    </md-list-item>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Niveau :</div>
+                        <div class="col-md-2" flex="20">Classe :</div>
                         <div class="col-md-9 justify"><select id="selectNiveau" size="1" style="min-width: 200px">
-                            <option value=""></option>
-                            <!--    <?php
-                                        $niveaux = Niveau::getAll();
-                                        foreach ($niveaux as $niveau) {
-                                            echo '<option value="' . $niveau->getIdNiveau() . '">' . $niveau->getLibelleNiveau() . '</option>';
-                                }
-                                ?>-->
-
+                            <option value=''>Sélectionner une classe</option>
+                            <optgroup label="Initial"></optgroup>-->
+                            <option>B1</option>
+                            <option>B2</option>
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
+                            <optgroup label="Alternant"></optgroup>-->
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
                         </select>
                         </div>
                     </md-list-item>
@@ -35,11 +31,9 @@
 
     <md-card flex="100">
             <md-card-content>
-
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-9 justify"><input id="inputId" type="hidden" name="idNiveau"
-                                                             value=""></div>
+                        <div class="col-md-9 justify"><input id="inputId" type="hidden" name="idNiveau" value=""></div>
                     </md-list-item>
                 </md-list>
                 <md-list>
@@ -54,22 +48,20 @@
                         <div class="col-md-2" flex="20">Module de rattachement :</div>
                         <div class="col-md-9 justify">
                             <select id="inputModule" name="module" size="1">
-                                <option value=""></option>
-                                <!--  <?php
-                                          $modules = Module::getAll();
-                                          foreach ($modules as $module) {
-                                              echo "<option value='" . $module->getIdModule() . "'>" . $module->getLibelleModule() . "</option>";
-                                  }
-                                  ?>-->
+                                <option value="">Sélectionner un module</option>
+                                <option value="">Gouvernance du S.I</option>
+                                <option value="">Gestion de projet agile</option>
+                                <option value="">Gestion des Risques</option>
                             </select>
                         </div>
                     </md-list-item>
                 </md-list>
                 <md-list>
                     <div class="col-md-2" flex="20"></div>
-                    <div class="col-md-9 justify"><button type="button" class="btn btn-succes">Valider</button></div>
+                    <div class="col-md-9 justify">
+                        <button type="button" class="btn btn-success">Valider</button>
+                    </div>
                 </md-list>
-
             </md-card-content>
     </md-card>
 </div>

@@ -1,28 +1,34 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Gestion des Niveaux de Comp&eacute;tence</h3>
+        <h3 class="centrer">Gestion des niveaux de comp&eacute;tence</h3>
     </div>
 
     <md-card-content>
-        <md-list>
-            <md-list-item>
-                <span id="newNiveauCpt"><i class="fa fa-plus-square-o" style="font-size: 20px;"></i> Nouveau Niveau de Comp&eacute;tence</span>
-            </md-list-item>
-            <md-list-item>
-                <div class="col-md-2" flex="20">Niveau : </div>
-                <div class="col-md-9 justify">
-                    <select id="selectNiveauCpt" size="1" style="min-width: 200px">
-                        <option value=""></option>
-                        <!-- <option value="' . $niveauCpt->getIdNiveauCpt() + $niveauCpt->getLibelleNiveauCpt() -->
-                    </select>
-                </div>
-            </md-list-item>
-        </md-list>
+        <md-card-header-text>Ajouter un niveau de compétence
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Niveau : </div>
+                    <div class="col-md-9 justify">
+                        <select id="selectNiveauCpt" size="1" style="min-width: 200px">
+                            <option value=''>Sélectionner une classe</option>
+                            <optgroup label="Initial"></optgroup>-->
+                            <option>B1</option>
+                            <option>B2</option>
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
+                            <optgroup label="Alternant"></optgroup>-->
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
+                        </select>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-card-header-text>
     </md-card-content>
     
     <md-card>
-        <!--<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>"> -->
-
         <form>
             <md-card-content>
                 <md-list>
