@@ -2,79 +2,38 @@
     <div class="titre_corps">
         <h3 class="centrer">Lien Tuteur - &Eacute;tudiant</h3>
     </div>
+
     <md-card flex="100">
-        <md-card-header-text>
-            V&eacute;rification par &eacute;tudiant
-        </md-card-header-text>
-        <md-card-content>
-            <md-list>
-             <div id="selectAction" style="width: 100%"></div>
-            <md-list-item>
-                <div class="col-md-2" flex="20">&Eacute;tudiant :</div>
-                <div class="col-md-9 justify"><select id="EleveSelect" name="EleveSelect">
-                        <option value=""></option>
-                       <!-- <?php
-								$eleves = Eleve::getAllActif();
-								foreach ($eleves as $e) {
-									echo "<option value='" . $e->getIdEleve() . "'>" . $e->getLibelleUtilisatur() . "</option>";
-                        }
-                        ?>-->
-                    </select>
-                </div>
-            </md-list-item>
-            </md-list>
-        <md-card flex="100">
-            <legend>Liste des tuteurs li&eacute;s</legend>
-            <ul id="ResponsableSelect"></ul>
-        </md-card>
-            </md-card-content>
-    </md-card>
-    </br>
-    <md-card flex="100">
-        <md-card-header-text>
-            Modification lien Tuteur/Etudiant
-            </md-card-header-text>
-        <md-card-content>
-            <md-list>
-                <div style="width: 100%"></div>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">&Eacute;tudiant :</div>
+            <md-card-content>
+                <md-list>
+                    <div style="width: 100%"></div>
                     <md-list-item>
-                        <div class="col-md-9 justify"><select id="inputEleve" name="inputEleve">
-                        <option value=""></option>
-                       <!-- <?php
-								$eleves = Eleve::getAllActif();
-								foreach ($eleves as $e) {
-									echo "<option value='" . $e->getIdEleve() . "'>" . $e->getLibelleUtilisatur() . "</option>";
-                        }
-                        ?>-->
+                        <div class="col-md-2" flex="20">&Eacute;tudiant :</div>
+                        <md-list-item>
+                            <div class="col-md-9 justify"><select id="inputEleve" name="inputEleve">
+                                <option value=""></option>
                             </select>
-                        </div>
+                            </div>
                         </md-list-item>
                     </md-list-item>
                 </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Tuteur :</div>
+                <md-list>
                     <md-list-item>
-                        <div class="col-md-2 justify"><select id="inputResponsable" name="inputResponsable">
-                        <option value=""></option>
-                    <!--    <?php
-								$responsables = Responsable::getAllActif();
-								foreach ($responsables as $r) {
-									echo "<option value='" . $r->getIdResponsable() . "'>" . $r->getLibelleUtilisatur() . "</option>";
-                        }
-                        ?>-->
-                    </select>
- </div>
+                        <div class="col-md-2" flex="20">Tuteur :</div>
+                        <md-list-item>
+                            <div class="col-md-2 justify"><select id="inputResponsable" name="inputResponsable">
+                                <option value=""></option>
+                            </select>
+                            </div>
                         </md-list-item>
                     </md-list-item>
-            </md-list>
-            <button type="button" class="btn btn-success">Ajouter</button>
-            <button type="button" class="btn btn-danger">Supprimer</button>
+                </md-list>
+                <button type="button" class="btn btn-success">Ajouter</button>
+                <button type="button" class="btn btn-danger">Supprimer</button>
                 </td>
-            </md-list>
-        </md-card-content>
+                </md-list>
+            </md-card-content>
     </md-card>
+
     <br/>
 </div>

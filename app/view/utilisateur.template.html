@@ -1,29 +1,19 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Gestion des Utilisateurs</h3>
+        <h3 class="centrer">Ajouter un utilisateur</h3>
     </div>
 
     <md-card flex="100">
-        <md-card-header-text>Ajouter un utilisateur
-            </md-card-header-text>
         <form>
             <md-card-content>
                 <md-list>
                     <md-list-item>
-                            <div class="col-md-9 justify"><input id="inputId" type="hidden" name="idUtilisateur"
-                                                                 value=""/></div>
-                        </md-list-item>
-                    <md-list-item>
-                            <div class="col-md-9 justify"><input id="inputActive" type="hidden" name="activeUtilisateur"
-                                                                 value=""/></div>
-                        </md-list-item>
-                    <md-list-item>
-                            <div class="col-md-2" flex="20"> Nom * :</div>
+                            <div class="col-md-2" flex="20"> Nom :</div>
                             <div class="col-md-9 justify"><input id="inputNom" type="text" required name="nomUtilisateur"
                                                                  value=""/></div>
                         </md-list-item>
                         <md-list-item>
-                            <div class="col-md-2" flex="20">Prénom * :</div>
+                            <div class="col-md-2" flex="20">Prénom :</div>
                             <div class="col-md-9 justify"><input id="inputPrenom" type="text" required name="prenomUtilisateur" value=""/></div>
                         </md-list-item>
                         <md-list-item>
@@ -40,7 +30,7 @@
                         </md-list-item>
                         <md-list-item>
                             <div class="col-md-2" flex="20">Mail :</div>
-                            <div class="col-md-9 justify"><input id="inputMail" type="text" name="mailUtilisateur" value=""/></div>
+                            <div class="col-md-9 justify"><input id="inputMail" type="email" name="mailUtilisateur" value=""/></div>
                         </md-list-item>
                         <md-list-item>
                             <div class="col-md-2">Fonction :</div>
@@ -56,13 +46,8 @@
                                                   value="Administrateur"/> Tuteur</label></div>
                                 <div class="checkbox col-md-9 justify">
                                     <label><input id="inputFonctionEleve" type="checkbox" multiple name="fonction[]"
-                                                  value="Administrateur"/> &Eacute;tudiant</label></div>
-                            </div>
-                        </md-list-item>
-                        <md-list>
-                            <md-list-item>
-                                <div class="col-md-2">Niveau de l'&Eacute;tudiant :</div>
-                                <div class="col-md-9 justify">
+                                                  value="Administrateur"/> &Eacute;tudiant</label>
+                                    => Classe :
                                     <select id="inputNiveau" name="niveauEleve" size="1">
                                         <option value=''></option>
                                         <optgroup label="Initial"></optgroup>-->
@@ -77,8 +62,8 @@
                                         <option>I5</option>
                                     </select>
                                 </div>
-                            </md-list-item>
-                        </md-list>
+                            </div>
+                        </md-list-item>
                         <md-list>
                             <md-list-item>
                                 <div class="col-md-2">Date de naissance :</div>
@@ -86,15 +71,11 @@
                             </md-list-item>
 
                             <md-list-item>
-                                <div class="col-md-2">Date de Inscription :</div>
+                                <div class="col-md-2">Date d'inscription :</div>
                                 <div class="col-md-9 justify"><input type="date" id="dateInscriptionUtilisateur" name="dateInscriptionUtilisateur">
                                 </div>
                             </md-list-item>
                         </md-list>
-                        <md-list-item>
-                            <div class="col-md-9 justify">Les champs suivis d'un * sont obligatoires</div>
-                        </md-list-item>
-
                         <md-list-item>
                             <div class="col-md-9 justify"><input type="submit" class="btn btn-success" id="submitButton" name="btSubmit" value="Valider"></div>
                             <div class="col-md-9 justify">

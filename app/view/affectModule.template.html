@@ -1,6 +1,6 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Affecter un module à un étudiant</h3>
+        <h3 class="centrer">Affectation d'un module</h3>
     </div>
 
     <md-card flex="100">
@@ -10,13 +10,11 @@
                     <div class="col-md-2" flex="20">&Eacute;tudiant : </div>
                     <div class="col-md-9 justify">
                         <select id="eleve">
-                            <option value=""></option>
-                       <!-- <?php
-                                $eleves = Eleve::getAllActif();
-                                foreach ($eleves as $eleve){
-                                    echo "<option value='".$eleve->getIdEleve()."'>".$eleve->getLibelleUtilisatur().'</option>';
-                        }
-                        ?>-->
+                            <option></option>
+                            <option value="">Reynard Jérémy</option>
+                            <option value="">Taïsse Sonia</option>
+                            <option value="">Sempé Jean-Baptiste</option>
+                            <option value="">Roger Jean-Baptiste</option>
                         </select>
                     </div>
                 </md-list-item>
@@ -26,7 +24,7 @@
                     <div class="col-md-2" flex="20">Classe : </div>
                     <div class="col-md-9 justify">
                         <select id="selectNiveau">
-                            <option value=''></option>
+                            <option value=''>Sélectionner une classe</option>
                             <optgroup label="Initial"></optgroup>
                             <option>B1</option>
                             <option>B2</option>
@@ -37,13 +35,6 @@
                             <option>B3</option>
                             <option>I4</option>
                             <option>I5</option>
-                            <!--  <?php
-                                      $niveaux = Niveau::getAll();
-                                      foreach ($niveaux as $niv){
-                                          //$niv = new Niveau();
-                                          echo '<option value="'.$niv->getIdNiveau().'">'.$niv->getLibelleNiveau().'</option>';
-                              }
-                              ?>-->
                         </select>
                     </div>
                 </md-list-item>
@@ -53,7 +44,10 @@
                     <div class="col-md-2" flex="20">Module : </div>
                     <div class="col-md-9 justify">
                         <select id="selectMatiere">
-                            <option value=""></option>
+                            <option value="">Sélectionner un module</option>
+                            <option value="">Gouvernance du S.I</option>
+                            <option value="">Gestion de projet agile</option>
+                            <option value="">Gestion des Risques</option>
                         </select>
                     </div>
                 </md-list-item>
@@ -71,12 +65,53 @@
         <h3 class="centrer">Modules de l'étudiant</h3>
     </div>
     <md-card>
-        <md-card-content>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20"></div>
-                </md-list-item>
-            </md-list>
-        </md-card-content>
+        <table id="mytable" class="table table-bordred table-striped">
+            <thead>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Classe</th>
+                <th>Module</th>
+            </thead>
+            <tbody>
+
+            <tr>
+                <td><input type="checkbox" class="checkthis" /></td>
+                <td>Taïsse</td>
+                <td>Sonia</td>
+                <td>I5</td>
+                <td>Qualité des données</td>
+                <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" class="checkthis" /></td>
+                <td>Reynard</td>
+                <td>Jérémy</td>
+                <td>I5</td>
+                <td>ERP</td>
+                <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" class="checkthis" /></td>
+                <td>Stax</td>
+                <td>Marc</td>
+                <td>B2</td>
+                <td>Base de données</td>
+                <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+            </tr>
+
+            </tbody>
+        </table>
+        <div class="clearfix"></div>
+        <ul class="pagination pull-right">
+            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+        </ul>
     </md-card>
 </div>
