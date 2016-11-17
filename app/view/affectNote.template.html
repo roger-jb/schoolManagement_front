@@ -6,164 +6,205 @@
         <a href="../Intranet/addEvaluation.php">Retour au choix d'&eacute;valuation</a>
     </div>
     <div id="libRappelEval">Rappel des Informations sur l'évaluation</div>
-    <fieldset id="detRappelEval">
-        <legend>Rappel Information sur l'&eacute;valuation</legend>
-        <input id="idEval" type="hidden" value="<?php echo $evaluation->getIdEvaluation(); ?>">
-        <table width="100%">
-            <tr>
-                <td><label for="addDate"> Date de l'&eacute;valuation : </label></td>
-                <td colspan="3"><input type="text" id="addDate" name="addDate" readonly value=""></td>
-            </tr>
-            <tr>
-                <td><label for="addTitre"> Titre de l'&eacute;valuation : </label></td>
-                <td colspan="3"><input type="text" id="addTitre" name="addTitre" readonly value=""></td>
-            </tr>
-            <tr>
-                <td width="20%"><label for="addNiveau"> Classe : </label></td>
-                <td width="30%">
 
-                    <input type="text" readonly value=""/>
-                </td>
-            </tr>
-            <tr>
-                <td width="20%"><label for="addMatiere"> Matiere : </label></td>
-                <td width="30%">
-                    <input type="text" readonly value="">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="typeEval">Type d'&eacute;valuation : </label></td>
-                <td>
-                    <input type="text" readonly value="">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="contenu">D&eacute;tail (Autre) : </label></td>
-                <td>
-                    <input id="contenu" type="text" name="autreEval" readonly value="">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="addMax"> Note Max de l'&eacute;valuation : </label></td>
-                <td colspan="3">
-                    <input type="text" id="addMax" name="addMax" readonly value="">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="inputSujet"> Sujet PDF :</label></td>
-                <td>
-                    <!--
+    <md-card>
+        <md-card-title>
+            Rappel Information sur l'&eacute;valuation
+        </md-card-title>
+        <input id="idEval" type="hidden" value="">
+
+        <md-card-content>
+            
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Date de l'évaluation </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" id="addDate" name="addDate" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Titre de l'évaluation </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" id="addTitre" name="addTitre" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Classe : </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" readonly value=""/>
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Module : </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Type d'évaluation </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Détail (Autre) : </div>
+                    <div class="col-md-9 justify">
+                        <input id="contenu" type="text" name="autreEval" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Note Max de l'évaluation: </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" id="addMax" name="addMax" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Sujet PDF :</div>
+                    <div class="col-md-9 justify">
+                        <!--
                     <?php
 							if (file_exists('../Evaluation/Sujet' . $evaluation->getIdEvaluation() . '.pdf')) {
                     ?> -->
-                    <a href="../Evaluation/Sujet<?php echo $evaluation->getIdEvaluation() ?>.pdf">Visualiser</a>
-                    <!--
-                    <?php
-							}
-							else {
-								?> -->
-                    Il n'y a pas de Sujet pour cette &eacute;valuation.
-                </td>
-            </tr>
-            <tr>
-                <td><label for="inputCorrection"> Correction PDF :</label></td>
-                <td>
-                    <!--
+                        <a href="../Evaluation/Sujet<?php echo $evaluation->getIdEvaluation() ?>.pdf">Visualiser</a>
+                        <!--
+                        <?php
+                                }
+                                else {
+                                    ?> -->
+                        Il n'y a pas de Sujet pour cette &eacute;valuation.
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Correction PDF :</div>
+                    <div class="col-md-9 justify">
+                        <!--
                     <?php
 							if (file_exists('../Evaluation/Corrige' . $evaluation->getIdEvaluation() . '.pdf')) {
                     ?> -->
-                    <a href="../Evaluation/Corrige<?php echo $evaluation->getIdEvaluation() ?>.pdf">Visualiser</a>
+                        <a href="../Evaluation/Corrige<?php echo $evaluation->getIdEvaluation() ?>.pdf">Visualiser</a>
 
-                    <!--
-                    <?php
-							}
-							else {
-								?> -->
-                    Il n'y a pas de Corrig&eacute; pour cette &eacute;valuation.
-                </td>
-            </tr>
-        </table>
-    </fieldset>
-    <br>
+                        <!--
+                        <?php
+                                }
+                                else {
+                                    ?> -->
+                        Il n'y a pas de Corrig&eacute; pour cette &eacute;valuation.
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
 
-    <div id="libRappelCpt">Rappel des compétences</div>
-    <fieldset id="detRappelCpt">
-        <legend>Rappel des compétences</legend>
-        <table width="100%">
+
+    <md-card>
+        <md-card-title>
+            Rappel des compétences
+        </md-card-title>
+
+        <md-card-content>
             <thead>
-            <td>racourci compétence</td>
-            <td>domaine de compétence</td>
-            <td>libellé de la compétence</td>
+            <md-list-item>Racourci compétence</md-list-item>
+            <md-list-item>Domaine de compétence</md-list-item>
+            <md-list-item>Libellé de la compétence</md-list-item>
             </thead>
             <!--
             <?php
 					$nbCpt      = 1;
 					$pointsCpts = PointCpt::getByEvaluation($evaluation->getIdEvaluation());
             foreach ($pointsCpts as $pCpt) {
-            echo '<tr><td>Cpt' . $nbCpt . '</td><td><input type="hidden" value="'.$pCpt->getIdPointCpt().'" id="idCpt'.$nbCpt.'" /></span>' . $pCpt->getLibellePointCpt() . '</td><td>' . $pCpt->getDomaineCpt()
-            ->getLibelleDomaineCpt() . '</td></tr>';
+            echo '<md-list><md-list-item>Cpt' . $nbCpt . '</md-list-item><md-list-item><input type="hidden" value="'.$pCpt->getIdPointCpt().'" id="idCpt'.$nbCpt.'" /></span>' . $pCpt->getLibellePointCpt() . '</md-list-item><md-list-item>' . $pCpt->getDomaineCpt()
+            ->getLibelleDomaineCpt() . '</md-list-item></md-list>';
             $nbCpt++;
             }
             $nbCpt--;
             ?> -->
-        </table>
-    </fieldset>
-    <br>
-    <fieldset>
-        <legend id="nomEleve" idEleve="idEleve">Noter un élève</legend>
-        <input type="hidden" id="nbCpt" value="<?php echo $nbCpt;?>"/>
-        <table>
-            <tr>
-                <td>&Eacute;lève :</td>
-                <td>
-                    <select id="idEleveNote">
-                        <option></option>
-                        <!--
-                        <?php
-								$allEleves = $evaluation->getEleves();
-                        foreach ($allEleves as $allE) {
-                        echo '<option value="' . $allE->getIdEleve() . '">' . $allE->getLibelleUtilisatur() . '</option>';
-                        }
-                        ?> -->
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td>note :</td>
-                <td>
-                    <input type="number" id="noteEleve" idEleve="idEleve" value="" min="0"
-                           max="">
-                </td>
-            </tr>
-        </table>
-        notation des compétences :<br>
-        <table>
-            <tr>
+        </md-card-content>
+    </md-card>
+
+    <md-card>
+        <md-card-title>
+            Noter un étudiant
+            <input type="hidden" id="nbCpt" value=""/>
+        </md-card-title>
+
+        <md-card-content>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Étudiant</div>
+                    <div class="col-md-9 justify">
+                        <select id="idEleveNote">
+                            <option></option>
+                            <!--
+                            <?php
+                                    $allEleves = $evaluation->getEleves();
+                            foreach ($allEleves as $allE) {
+                            echo '<option value="' . $allE->getIdEleve() . '">' . $allE->getLibelleUtilisatur() . '</option>';
+                            }
+                            ?> -->
+                        </select>
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Note</div>
+                    <div class="col-md-9 justify">
+                        <input type="number" id="noteEleve" idEleve="idEleve" value="" min="0" max="">
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
+
+    <md-card>
+
+        <md-card-title>
+            Notation des compétences
+        </md-card-title>
+
+        <md-card-content>
+            <md-list>
                 <!--
                 <?php
 						$noteCpt = 0;
 						while ($noteCpt < $nbCpt) {
-							echo '<td>cpt' . ($noteCpt + 1) . '</td>';
+							echo '<md-list-item>cpt' . ($noteCpt + 1) . '</md-list-item>';
                 $noteCpt++;
                 }
                 ?> -->
-            </tr>
-            <tr>
+            </md-list>
+            <md-list>
                 <!--
                 <?php
 						$noteCpt = 0;
 						while ($noteCpt < $nbCpt) {
-							echo "<td><select id='evalCpt".($noteCpt+1)."'>" . $selectNiveauCpt . "</select></td>";
+							echo "<md-list-item><select id='evalCpt".($noteCpt+1)."'>" . $selectNiveauCpt . "</select></md-list-item>";
                 $noteCpt++;
                 }
                 ?> -->
-            </tr>
-        </table>
-        <br>
-        <input id="validation" type="button" value="Valider" class="submit">
-        <br>
-    </fieldset>
-    <br>
+            </md-list>
+        </md-card-content>
+    </md-card>
+
+
+    <input id="validation" type="button" value="Valider" class="btn btn-success">
+
 </div>
 <div style="clear: both"></div>
 </div>

@@ -15,6 +15,12 @@
       var login = this.identifiant;
       var pwd = "1a2b8b8dbfc756bbfb6aa2609dae7e9286a989764595713ab9034f237016ae95";//this.pwd;
       var pwd = sha256_digest(this.pwd);
+      $scope.sharedData.utilisateur = {
+        'name': 'Jerem'
+      };
+      $scope.sharedData.token = data.token;
+      $scope.$parent.addTabs();
+      return;
 
       $http.post($scope.sharedData.conf.apiAdress + '/authenticate',
         JSON.stringify({

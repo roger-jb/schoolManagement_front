@@ -10,125 +10,155 @@
         <md-card-title>
             Rappel Information sur l'évaluation
         </md-card-title>
-        
         <input id="idEval" type="hidden" value="">
-        <table width="100%">
-            <tr>
-                <td><label for="addDate"> date de l'&eacute;valuation : </label></td>
-                <td colspan="3"><input type="text" id="addDate" name="addDate" readonly value=""></td>
-            </tr>
-            <tr>
-                <td><label for="addTitre"> titre de l'&eacute;valuation : </label></td>
-                <td colspan="3"><input type="text" id="addTitre" name="addTitre" readonly value=""></td>
-            </tr>
-            <tr>
-                <td width="20%"><label for="addNiveau"> Classe : </label></td>
-                <td width="30%">
-                    <input type="text" readonly value="">
-                </td>
-            </tr>
-            <tr>
-                <td width="20%"><label for="addMatiere"> Module : </label></td>
-                <td width="30%">
-                    <input type="text" readonly value="">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="typeEval">Type d'&eacute;valuation : </label></td>
-                <td>
-                    <input type="text" readonly value="">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="contenu">D&eacute;tail (Autre) : </label></td>
-                <td>
-                    <input id="contenu" type="text" name="autreEval" readonly value="">
-                </td>
-            </tr>
-            <tr>
-                <td><label for="addMax"> Note Max de l'&eacute;valuation : </label></td>
-                <td colspan="3"><input type="text" id="addMax" name="addMax" readonly value=""></td>
-            </tr>
-            <tr>
-                <td><label for="inputSujet"> Sujet PDF :</label></td>
-                <td>
-                    <!--
+
+        <md-card-content>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Date de l'évaluation </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" id="addDate" name="addDate" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Titre de l'évaluation </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" id="addTitre" name="addTitre" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Classe :  </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Module :  </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Type de l'évaluation :  </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Détail (Autre) :  </div>
+                    <div class="col-md-9 justify">
+                        <input id="contenu" type="text" name="autreEval" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20"> Note Max de l'évaluation </div>
+                    <div class="col-md-9 justify">
+                        <input type="text" id="addMax" name="addMax" readonly value="">
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20"> Sujet PDF : </div>
+                    <div class="col-md-9 justify">
+                        <!--
                     <?php
 							if (file_exists('../Evaluation/Sujet'.$evaluation->getIdEvaluation().'.pdf')) {
                     ?> -->
-                    <a href="../Evaluation/Sujet.pdf">Visualiser</a>
-                    <!--
+                        <a href="../Evaluation/Sujet.pdf">Visualiser</a>
+                        <!--
                     <?php
 							}
 							else{
 							?> -->
-                    Il n'y a pas de Sujet pour cette &eacute;valuation.
-
-                </td>
-            </tr>
-            <tr>
-                <td><label for="inputCorrection"> Correction PDF :</label></td>
-                <td>
-                    <!--
+                        Il n'y a pas de Sujet pour cette &eacute;valuation.
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20"> Correction PDF : </div>
+                    <div class="col-md-9 justify">
+                        <!--
                     <?php
 							if (file_exists('../Evaluation/Corrige'.$evaluation->getIdEvaluation().'.pdf')){
                     ?> -->
-                    <a href="../Evaluation/Corrige.pdf">Visualiser</a>
-                    <!--
-                    <?php
-							}
-							else {
-								?> -->
-                    Il n'y a pas de Corrige pour cette &eacute;valuation.
-                </td>
-            </tr>
-        </table>
-    </md-card>
-
-
-
-    <fieldset>
-        <legend>gestion des comp&eacute;tences</legend>
-        <table>
-            <tr>
-                <td rowspan="2">Domaine</td>
-                <td><input type="text" id="txtDomaine" ></td>
-            </tr>
-            <tr>
-                <td>
-                    <select id="selectDomaine">
-                        <option value=""></option>
-
+                        <a href="../Evaluation/Corrige.pdf">Visualiser</a>
                         <!--
                         <?php
-								$domaines = DomaineCpt::getByMatiere($evaluation->getMatiereNiveau()->getIdMatiere());
-                        foreach ($domaines as $domaine){
-                        echo "<option value='".$domaine->getIdDomaineCpt()."'>".$domaine->getLibelleDomaineCpt()."</option>";
-                        }
-                        ?> -->
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td rowspan="2">Compétence</td>
-                <td><input type="text" id="txtCpt"></td>
-            </tr>
-            <tr>
-                <td>
-                    <select id="selectCpt" name="selectCpt">
-                        <option value=""></option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2"><input type="button" id="addCpt" class="submit" value="Ajouter Comp&eacute;tence" /></td>
-            </tr>
-        </table>
-    </fieldset>
-    <fieldset>
-        <legend>Liste des comp&eacute;tences présentes</legend>
-        <ul id="listeCpt">
+                                }
+                                else {
+                                    ?> -->
+                        Il n'y a pas de Corrige pour cette &eacute;valuation.
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
 
+    <md-card>
+        <md-card-title>
+            Gestion des compétences
+        </md-card-title>
+
+        <md-card-content>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20"> Domaine </div>
+                        <div class="col-md-9 justify">
+                            <input type="text" id="txtDomaine" >
+                            <select id="selectDomaine">
+                                <option value=""></option>
+                                <!--
+                                <?php
+                                        $domaines = DomaineCpt::getByMatiere($evaluation->getMatiereNiveau()->getIdMatiere());
+                                foreach ($domaines as $domaine){
+                                echo "<option value='".$domaine->getIdDomaineCpt()."'>".$domaine->getLibelleDomaineCpt()."</option>";
+                                }
+                                ?> -->
+                            </select>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20"> Compétences </div>
+                        <div class="col-md-9 justify">
+                            <input type="text" id="txtCpt">
+                            <select id="selectCpt" name="selectCpt">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </md-list-item>
+                </md-list>
+
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">
+                        <input type="button" id="addCpt" class="btn btn-success" value="Ajouter Compétence" />
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
+
+    <md-card>
+        <md-card-title>
+            Liste des compétences
+        </md-card-title>
+        <ul id="listeCpt">
         </ul>
-    </fieldset>
+    </md-card>
 </div>
