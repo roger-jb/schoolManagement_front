@@ -27,8 +27,15 @@
         <md-tabs md-selected="selectedIndex" md-dynamic-height md-border-bottom>
             <md-tab ng-repeat="tab in tabs"
                     label="{{tab.title}}">
-                <div class="demo-tab tab{{$index%4}}" style="padding: 25px; text-align: center;">
-                    <div ng-include="tab.content"></div>
+                <div class="demo-tab tab{{$index}} {{tab.id}}" style="padding: 25px; text-align: center;">
+                    <div>
+                        <md-tabs md-dynamic-height md-border-bottom >
+                            <md-tab ng-repeat="subtab in tab.sub"
+                                    label="{{subtab.title}}">
+                                <div ng-include="subtab.content"/>
+                            </md-tab>
+                        </md-tabs>
+                    </div>
                 </div>
             </md-tab>
         </md-tabs>

@@ -10,3 +10,17 @@
 .justify {
   text-align: justify;
 }
+
+#submenu {
+  list-style-type: none;
+  text-align:right;
+}
+
+#submenu li {
+  float: right;
+  padding-left: 10px;
+}
+
+.connexion md-tabs-wrapper {
+  display: none;
+}

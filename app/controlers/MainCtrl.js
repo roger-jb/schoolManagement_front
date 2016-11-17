@@ -31,11 +31,16 @@
         administrateur: false,
         professeur: false,
         responsable: false,
-        eleve: false
+        eleve: false,
+        id : 'connexion',
+        sub: [{
+          title: 'Me connecter',
+          content: 'view/connexion.template.html'
+        }]
       },
       // {title: 'Mon Profil', content: 'view/profil.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
 
-      {
+/*      {
         title: 'Administration',
         content: 'view/utilisateur.template.html',
         administrateur: true,
@@ -60,8 +65,8 @@
         eleve: false
       },
       {
-        title: 'Publication',
-        content: 'view/addEvaluation.template.html',
+        title: 'Carnet de Liaison',
+        content: 'view/carnetLiaison.template.html',
         administrateur: true,
         professeur: true,
         responsable: true,
@@ -69,7 +74,22 @@
       },
       {
         title: 'Bulletin',
-        content: 'view/connexion.template.html',
+        content: 'view/getBulletin.template.html',
+        administrateur: true,
+        professeur: true,
+        responsable: false,
+        eleve: false
+      },*/
+      {
+        title: 'Compétences',
+        content: 'view/modifCpt.template.html',
+        sub: [{
+          title: 'Modifier',
+          content: 'view/modifCpt.template.html'
+        }, {
+          title: 'Niveaux',
+          content: 'view/niveauCpt.template.html'
+        }],
         administrateur: true,
         professeur: true,
         responsable: false,
@@ -105,26 +125,18 @@
           responsable: true,
           eleve: true
         };
+        $scope.tabs = $scope.tabs.slice();
         var newIndex = $scope.tabs.push(tab);
         $timeout(function () {
           $scope.selectedIndex = 0;
         });
       }
     };
-    $scope.tabs = [
-      {
-        title: 'Connexion',
-        content: 'view/connexion.template.html',
-        administrateur: false,
-        professeur: false,
-        responsable: false,
-        eleve: false
-      }
-    ];
+    $scope.tabs = [ tabs[0] ];
 
 
-    $scope.tabs = tabs;
-    $scope.tabs.push({title: 'Mon Profil', content: 'view/profil.template.html'});
+    //$scope.tabs = tabs;
+    //$scope.tabs.push({title: 'Mon Profil', content: 'view/profil.template.html'});
   }
 })();
 

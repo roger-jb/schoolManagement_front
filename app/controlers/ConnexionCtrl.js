@@ -2,6 +2,37 @@
  * Created by Jean-Baptiste on 07/11/2016.
  */
 
+const USERS = {
+  "Prof" : {
+    professeur: true,
+    eleve: null,
+    responsable: null,
+    administrateur: null,
+    id: 1
+  },
+  "Eleve" : {
+    professeur: null,
+    eleve: true,
+    responsable: null,
+    administrateur: null,
+    id: 1
+  },
+  "Responsable" : {
+    professeur: null,
+    eleve: null,
+    responsable: true,
+    administrateur: null,
+    id: 1
+  },
+  "Administrateur" : {
+    professeur: null,
+    eleve: null,
+    responsable: null,
+    administrateur: true,
+    id: 1
+  }
+};
+
 (function () {
   'use strict';
 
@@ -14,12 +45,12 @@
       // var login = "ROGER.Jean-Baptiste";
       var login = this.identifiant;
       // var pwd = "1a2b8b8dbfc756bbfb6aa2609dae7e9286a989764595713ab9034f237016ae95";
-      var pwd = sha256_digest(this.pwd);
-      $scope.sharedData.utilisateur = {
-        'name': 'Jerem'
-      };
-      $scope.sharedData.token = data.token;
+      //var pwd = sha256_digest(this.pwd);
+      $scope.sharedData.utilisateur = USERS[login];
+      //$scope.sharedData.token = data.token;
       $scope.$parent.addTabs();
+
+
       return;
 
       $http.post($scope.sharedData.conf.apiAdress + '/authenticate',
