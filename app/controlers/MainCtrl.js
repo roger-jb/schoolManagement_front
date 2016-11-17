@@ -46,13 +46,10 @@
                 eleve: false,
                 id : 'administration',
                 sub: [{
-                    title: 'Gestion des utilisateurs',
+                    title: 'Utilisateurs',
                     content: 'view/utilisateur.template.html'
                 },{
-                    title: 'Gestion des semestres',
-                    content: 'view/semestre.template.html'
-                },{
-                    title: 'Gestion des niveaux',
+                    title: 'Niveaux',
                     content: 'view/niveau.template.html'
                 },
                     {
@@ -115,7 +112,7 @@
                     content: 'view/createEvaluation.template.html'
                 }],
             },
-            
+
             {
                 title: 'Notes',
                 sub: [{
@@ -169,7 +166,7 @@
                 title: 'Espace entreprise',
                 sub: [{
                     title: 'Consulter les notes de mes étudiants',
-                    content: 'view/consulteNoteEtudiant.template.html'
+                    content: 'view/consultNoteCompetence.template.html'
                 },{
                     title: 'Sondage modules titre RNCP',
                     content: 'view/sondage.template.html'
