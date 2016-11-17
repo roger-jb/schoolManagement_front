@@ -1,1 +1,77 @@
-test
+<script>
+    $('#testBtn').click(function () {
+        var cnt=4;
+        var btn = $(this);
+        btn.button('loading');
+        setTimeout(function () {
+            cnt++;
+            btn.button('reset');
+            btn.text('  ' + cnt);
+        }, 1000);
+    });
+
+    $('#testBtnDown').click(function () {
+        var cnt=4;
+        var btn = $(this);
+        btn.button('loading');
+        setTimeout(function () {
+            if (cnt > 0) {
+                cnt--;
+            }
+            btn.button('reset');
+            btn.text('  ' + cnt);
+        }, 1000);
+    });
+</script>
+
+<div id="corps">
+    <div class="titre_corps">
+        <h3 class="centrer">Besoins en entreprise</h3>
+    </div>
+
+    <md-card flex="100">
+
+            <md-card-content>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20"> Qualité des données</div>
+                        <div class="col-md-9 justify">
+                            <button type="button"
+                                    id="testBtn"
+                                    class="btn btn-success glyphicon glyphicon-thumbs-up"
+                                    data-loading-text=" ... ">
+                                4</button>
+                            <button type="button" id="testBtnDown" class="btn btn-danger glyphicon glyphicon-thumbs-down" data-loading-text=" ... ">
+                                4</button>
+                        </div>
+                    </md-list-item>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20"> Lean Management</div>
+                        <div class="col-md-9 justify">
+                            <button type="button"
+                                    id="testBtn"
+                                    class="btn btn-success glyphicon glyphicon-thumbs-up"
+                                    data-loading-text=" ... ">
+                                17</button>
+                            <button type="button" id="testBtnDown" class="btn btn-danger glyphicon glyphicon-thumbs-down" data-loading-text=" ... ">
+                                2</button>
+                        </div>
+                    </md-list-item>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20"> Projet ERP</div>
+                        <div class="col-md-9 justify">
+                            <button type="button"
+                                    id="testBtn"
+                                    class="btn btn-success glyphicon glyphicon-thumbs-up"
+                                    data-loading-text=" ... ">
+                                28</button>
+                            <button type="button" id="testBtnDown" class="btn btn-danger glyphicon glyphicon-thumbs-down" data-loading-text=" ... ">
+                                0</button>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+            </md-card-header-text>
+        </form>
+    </md-card>
+</div>
