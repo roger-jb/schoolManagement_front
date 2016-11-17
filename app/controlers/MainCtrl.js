@@ -50,7 +50,7 @@
         }]
        },
        {
-       title: 'Evaluation',
+       title: 'Évaluation',
        administrateur: true,
        professeur: true,
        responsable: false,
@@ -64,7 +64,7 @@
            content: 'view/modifEval.template.html'
          },
            {
-             title: 'Créer',
+             title: 'Consulter',
              content: 'view/createEvaluation.template.html'
            }],
        },
@@ -89,9 +89,14 @@
        eleve: true,
          id : 'carnetLiaison',
          sub: [{
-           title: 'Carnet de Liaison',
+           title: 'Nouveau',
            content: 'view/carnetLiaison.template.html'
-         }]
+         },
+             {
+                 title: 'Ancien',
+                 content: 'view/carnetConsultation.template.html'
+
+             }]
        },
        {
        title: 'Bulletin',
