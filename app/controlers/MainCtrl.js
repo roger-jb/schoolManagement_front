@@ -215,7 +215,7 @@
                 });
             }
         };
-        var addTab = function (tab) {
+       var addTab = function (tab) {
             var exist = false;
             $scope.tabs.forEach(function (item) {
                 if (item.title === tab.title) {
@@ -225,10 +225,9 @@
             if (!exist) {
                 $scope.tabs[0] = {
                     title: 'Mon Profil',
-                    content: 'view/profil.template.html',
                     administrateur: false,
-                    professeur: true,
-                    responsable: true,
+                    professeur: false,
+                    responsable: false,
                     eleve: true,
                     id : 'profil',
                     sub: [{

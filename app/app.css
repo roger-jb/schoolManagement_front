@@ -29,7 +29,6 @@
   display: none;
 }
 
-
 .profil md-tabs-wrapper {
   display: none;
 }
@@ -37,7 +36,13 @@
 .bulletin md-tabs-wrapper {
   display: none;
 }
-/*
+
 #tabContainer .btn.btn-success {
-  background: white;
-}*/
+  background: #607D8B;
+  border: #1A237E;
+}
+
+#tabContainer .btn.btn-danger {
+  background:#E57373;
+  border: #1A237E;
+}

@@ -1,8 +1,6 @@
 <div ng-controller="ConnexionController">
     <md-card flex="100">
         <md-card-header-text>
-            <span class="md-title md-no-sticky">Se connecter</span>
-
         <md-card-content>
             <md-list>
                 <md-list-item>
@@ -14,7 +12,8 @@
                     <div class="col-md-9 justify"><input type="password" ng-model="pwd"/></div>
                 </md-list-item>
                 <md-list-item>
-                    <div class="col-md-2">
+                    <div class="col-md-2" flex="20"></div>
+                    <div class="col-md-9 justify">
                         <md-button ng-click="connect()" class="btn btn-success" >connexion</md-button>
                     </div>
                 </md-list-item>
