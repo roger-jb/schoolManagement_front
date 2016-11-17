@@ -43,11 +43,14 @@
                                                   value="Administrateur"/> Enseignant</label></div>
                                 <div class="checkbox col-md-9 justify">
                                     <label><input id="inputFonctionResponsable" type="checkbox" multiple name="fonction[]"
-                                                  value="Administrateur"/> Tuteur</label></div>
+                                                  value="Administrateur"/> Tuteur</label>
+                                    &nbsp;&nbsp;&nbsp;Nom : <input  type="text" name=""  value=""/>
+                                    &nbsp;&nbsp;&nbsp;Prénom : <input  type="text" name="" value=""/>
+                                </div>
                                 <div class="checkbox col-md-9 justify">
                                     <label><input id="inputFonctionEleve" type="checkbox" multiple name="fonction[]"
                                                   value="Administrateur"/> &Eacute;tudiant</label>
-                                    => Classe :
+                                    &nbsp;&nbsp;&nbsp;Classe :
                                     <select id="inputNiveau" name="niveauEleve" size="1">
                                         <option value=''></option>
                                         <optgroup label="Initial"></optgroup>-->
@@ -61,18 +64,16 @@
                                         <option>I4</option>
                                         <option>I5</option>
                                     </select>
+                                    &nbsp;&nbsp;&nbsp;Entreprise : <input id="" type="text" name="" value=""/>
+                                    &nbsp;&nbsp;&nbsp;Tuteur : <input  type="text" name="" placeholder="Nom.Prénom" value=""/>
                                 </div>
                             </div>
                         </md-list-item>
                         <md-list>
                             <md-list-item>
-                                <div class="col-md-2">Date de naissance :</div>
-                                <div class="col-md-9 justify"><input type="date" id="dateNaissanceUtilisateur" name="dateNaissanceUtilisateur"></div>
-                            </md-list-item>
-
-                            <md-list-item>
                                 <div class="col-md-2">Date d'inscription :</div>
-                                <div class="col-md-9 justify"><input type="date" id="dateInscriptionUtilisateur" name="dateInscriptionUtilisateur">
+                                <div class="col-md-9 justify">
+                                    <input type="date" id="dateInscriptionUtilisateur" name="dateInscriptionUtilisateur" >
                                 </div>
                             </md-list-item>
                         </md-list>
