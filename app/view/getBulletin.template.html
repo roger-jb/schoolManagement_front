@@ -5,54 +5,73 @@
 
     <md-card flex="100">
         <md-card-content>
-            <md-card-header-text>
-                Sélectionner une classe et un étudiant
-                <div id="selectAction" style="width: 100%"></div>
-                <md-list>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Semestre :</div>
-                        <div class="col-md-9 justify">
-                            <select id="selectTrimestre" name="idTrimestre">
-                                <option>1</option>
-                                <option>2</option>
-                            </select>
-                        </div>
-                    </md-list-item>
-                </md-list>
-                <md-list>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Niveau :</div>
-                        <div class="col-md-9 justify"><select id="selectNiveau" name="idNiveau">
-                            <option>I5</option>
-                            <optgroup label="Initial"></optgroup>
-                            <option>B1</option>
-                            <option>B2</option>
-                            <option>B3</option>
-                            <option>I4</option>
-                            <option>I5</option>
-                            <optgroup label="Alternant"></optgroup>
-                            <option>B3</option>
-                            <option>I4</option>
+        <md-card-header-text>
+
+            <div name="idEval" type="hidden" value="" style="width: 100%"></div>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20"> Étudiant :</div>
+                    <div class="col-md-9 justify">
+                        <select id="selectEleve" size="1" style="min-width: 200px" name="idEleve">
+                            <option value="">Reynard Jérémy</option>
+                            <option value="">Taïsse Sonia</option>
+                            <option value="">Sempé Jean-Baptiste</option>
+                            <option value="">Roger Jean-Baptiste</option>
                         </select>
-                            </select>
-                        </div>
-                    </md-list-item>
-                </md-list>
-                <md-list>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Etudiant :</div>
-                        <div class="col-md-9 justify">
-                            <select id="selectEleve" name="idEleve">
-                                <option value="">Reynard Jérémy</option>
-                                <option value="">Taïsse Sonia</option>
-                                <option value="">Sempé Jean-Baptiste</option>
-                                <option value="">Roger Jean-Baptiste</option>
-                            </select>
-                        </div>
-                    </md-list-item>
-                </md-list>
-                <input type="submit" class="btn btn-success" name="genBulletin" value="Génération du bulletin">
-            </md-card-header-text>
-        </md-card-content>
+                    </div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Classe :</div>
+                    <div class="col-md-9 justify">
+                        <select id="addNiveau" name="addNiveau">
+                            <option>I5</option>
+                        </select>
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Module :</div>
+                    <div class="col-md-9 justify"><select id="" name="addMatiere">
+                        <option value="">Gestion des Risques</option>
+                    </select>
+                    </div>
+                    <div class="col-md-2" flex="20">Note :</div>
+                    <div class="col-md-9 justify">
+                        <input type="number" id="" name="addMax" value="8">
+                    </div>
+                    <div class="col-md-2" flex="20">ECTS :</div>
+                    <div class="col-md-9 justify"><input type="number" id="addMax" name="addMax" value="0"></div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Module :</div>
+                    <div class="col-md-9 justify"><select id="addMatiere" name="addMatiere">
+                        <option value="">Gouvernance du S.I</option>
+                    </select>
+                    </div>
+                    <div class="col-md-2" flex="20">Note :</div>
+                    <div class="col-md-9 justify">
+                        <input type="number" id="" name="addMax" value="11">
+                    </div>
+                    <div class="col-md-2" flex="20">ECTS :</div>
+                    <div class="col-md-9 justify"><input type="number" id="" name="addMax" value="2"></div>
+                </md-list-item>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Module :</div>
+                    <div class="col-md-9 justify"><select id="" name="addMatiere">
+                        <option value="">Gestion de projet agile</option>
+                    </select>
+                    </div>
+                    <div class="col-md-2" flex="20">Note :</div>
+                    <div class="col-md-9 justify">
+                        <input type="number" id="" name="addMax" value="14">
+                    </div>
+                    <div class="col-md-2" flex="20">ECTS :</div>
+                    <div class="col-md-9 justify"><input type="number" id="" name="addMax" value="2"></div>
+                </md-list-item>
+            </md-list>
+            <input type="submit" class="btn btn-success" id="submitButton" name="btAjouter" value="Générer PDF">
+        </md-card-header-text>
+    </md-card-content>
     </md-card>
 </div>
