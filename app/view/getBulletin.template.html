@@ -6,20 +6,16 @@
     <md-card flex="100">
         <md-card-content>
             <md-card-header-text>
-                Choisir un niveau et un &eacute;tudiant
+                Sélectionner une classe et un étudiant
                 <div id="selectAction" style="width: 100%"></div>
                 <md-list>
                     <md-list-item>
                         <div class="col-md-2" flex="20">Semestre :</div>
-                        <div class="col-md-9 justify"><select id="selectTrimestre" name="idTrimestre">
-                            <option value=""></option>
-                            <!--  <?php
-                                      $trimestres = Trimestre::getAll();
-                                      foreach ($trimestres as $trimestre){
-                                          echo "<option value='".$trimestre->getIdTrimestre()."'>".$trimestre->getLibelleTrimestre()."</option>";
-                              }
-                              ?>-->
-                        </select>
+                        <div class="col-md-9 justify">
+                            <select id="selectTrimestre" name="idTrimestre">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
                         </div>
                     </md-list-item>
                 </md-list>
@@ -27,24 +23,17 @@
                     <md-list-item>
                         <div class="col-md-2" flex="20">Niveau :</div>
                         <div class="col-md-9 justify"><select id="selectNiveau" name="idNiveau">
-                            <option value=""></option>
-                            <optgroup label="Initial"></optgroup>-->
+                            <option>I5</option>
+                            <optgroup label="Initial"></optgroup>
                             <option>B1</option>
                             <option>B2</option>
                             <option>B3</option>
                             <option>I4</option>
                             <option>I5</option>
-                            <optgroup label="Alternant"></optgroup>-->
+                            <optgroup label="Alternant"></optgroup>
                             <option>B3</option>
                             <option>I4</option>
-                            <option>I5</option>
                         </select>
-                            <!--  <?php
-                                      $niveaux = Niveau::getAll();
-                                      foreach ($niveaux as $niv){
-                                          echo "<option value='".$niv->getIdNiveau()."'>".$niv->getLibelleNiveau()."</option>";
-                              }
-                              ?>-->
                             </select>
                         </div>
                     </md-list-item>
@@ -52,17 +41,17 @@
                 <md-list>
                     <md-list-item>
                         <div class="col-md-2" flex="20">Etudiant :</div>
-                        <div class="col-md-9 justify"><select id="selectEleve" name="idEleve">
-                            <option value=""></option>
-                        </select>
+                        <div class="col-md-9 justify">
+                            <select id="selectEleve" name="idEleve">
+                                <option value="">Reynard Jérémy</option>
+                                <option value="">Taïsse Sonia</option>
+                                <option value="">Sempé Jean-Baptiste</option>
+                                <option value="">Roger Jean-Baptiste</option>
+                            </select>
                         </div>
                     </md-list-item>
                 </md-list>
-                <input type="submit" id="btRechercher" name="genBulletin" value="G&eacute;n&eacute;ner Bulletin">
-                <input type="submit" id="btRechercher" name="genNotes" value="G&eacute;n&eacute;ner Relev&eacute; de Notes">
-                <input type="submit" id="btRechercher" name="genCpt" value="G&eacute;n&eacute;ner Livret de Comp&eacute;tences">
-
-
+                <input type="submit" class="btn btn-success" name="genBulletin" value="Génération du bulletin">
             </md-card-header-text>
         </md-card-content>
     </md-card>

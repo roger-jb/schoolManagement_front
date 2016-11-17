@@ -45,7 +45,7 @@
       },
       {
         title: 'Evaluation',
-        content: 'view/niveauCpt.template.html',
+        content: 'view/modifEval.template.html',
         administrateur: true,
         professeur: true,
         responsable: false,
@@ -61,7 +61,7 @@
       },
       {
         title: 'Publication',
-        content: 'view/addEvaluation.template.html',
+        content: 'view/carnetLiaison.template.html',
         administrateur: true,
         professeur: true,
         responsable: true,
@@ -69,7 +69,7 @@
       },
       {
         title: 'Bulletin',
-        content: 'view/connexion.template.html',
+        content: 'view/getBulletin.template.html',
         administrateur: true,
         professeur: true,
         responsable: false,

@@ -5,54 +5,37 @@
 
     <md-card flex="100">
         <md-card-content>
-    <div id="selectAction" style="width: 100%"></div>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2 justify"></div>
-                    <div class="col-md-9 justify">
-                <span id="newModule"><button type="button" class="btn btn-primary">Nouveau Cursus</button></span>
-                    </div>
-                </md-list-item>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Cursus :</div>
-                    <div class="col-md-9 justify">
-                    <select id="selectModule" size="1" style="min-width: 200px">
-                        <option value=""></option>
-                     <!--   <?php
-                                $modules = Module::getAll();
-                                foreach ($modules as $module) {
-                                    echo '<option value="' . $module->getIdModule() . '">' . $module->getLibelleModule() . '</option>';
-                        }
-                        ?>-->
-                    </select>
-                    </div>
-                </md-list-item>
-            </md-list>
+            <md-card-header-text>Consulter les cursus
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Cursus :</div>
+                        <div class="col-md-9 justify">
+                        <select id="selectModule" size="1" style="min-width: 200px">
+                            <option value="">Sélectionner un cursus</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Libell&eacute; * :</div>
+                        <div class="col-md-9 justify"><input id="inputLibelle" type="text" required name="libelleModule" value=""></div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20"></div>
+                        <div class="col-md-9 justify">
+                            <button type="button" class="btn btn-succes">Valider</button>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-card-header-text>
         </md-card-content>
     </md-card>
 
-
-    <md-card flex="100">
-            <md-card-content>
-                <md-list>
-                    <md-list-item>
-                    <div class="col-md-2" flex="20"><input id="inputId" type="hidden" name="idModule"
-                               value=""></div>
-                    </md-list-item>
-                </md-list>
-                <md-list>
-                    <md-list-item>
-                    <div class="col-md-2" flex="20">Libell&eacute; * :</div>
-                    <div class="col-md-9 justify"><input id="inputLibelle" type="text" required name="libelleModule"
-                               value=""></div>
-                    </md-list-item>
-                </md-list>
-                <md-list>
-                    <md-list-item>
-                    <div class="col-md-2" flex="20"></div>
-                    <div class="col-md-9 justify"><button type="button" class="btn btn-succes">Valider</button></div>
-                    </md-list-item>
-                </md-list>
-            </md-card-content>
-</md-card>
 </div>
