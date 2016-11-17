@@ -46,3 +46,12 @@
   background:#E57373;
   border: #1A237E;
 }
+
+#tabContainer .progress-bar.progress-bar-success {
+  background: #81C784;
+}
+
+#tabContainer .progress-bar.progress-bar-danger {
+  background:#E57373;
+  border: #1A237E;
+}
