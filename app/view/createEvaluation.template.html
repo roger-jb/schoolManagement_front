@@ -1,20 +1,17 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 id="pageTitle" class="centrer">Cr&eacute;ation d'une évaluation</h3>
+        <h3 id="pageTitle" class="centrer">Consultation d'une évaluation</h3>
     </div>
 
     <form method="POST" action="">
         <input id="idUtilisateur" type="hidden" value="">
-        <md-card>
-            <md-card-content>
-                <md-list>
-                    <md-list-item><input id="newInputIdEvaluation" type="hidden" name="idEvaluation" value=""></md-list-item>
-                </md-list>
-                <md-list>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Classe : </div>
-                        <div class="col-md-9 justify">
-                            <select id="newSelectNiveau" size="1" style="min-width: 200px" name="idNiveau">
+        <md-card flex="100">
+            <md-card-header-text>
+                <md-card-content>
+                    <md-list>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Classe :</div>
+                            <div class="col-md-9 justify"><select id="selectNiveau">
                                 <option value=''></option>
                                 <optgroup label="Initial"></optgroup>-->
                                 <option>B1</option>
@@ -27,67 +24,28 @@
                                 <option>I4</option>
                                 <option>I5</option>
                             </select>
-                        </div>
-                    </md-list-item>
-                </md-list>
-                <md-list>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Module : </div>
-                        <div class="col-md-9 justify">
-                            <select id="newSelectMatiere" size="1" style="min-width: 200px" name="idMatiere">
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                    <md-list>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Module :</div>
+                            <div class="col-md-9 justify"><select id="selectMatiere">
                                 <option value=""></option>
                                 <option value="">Gouvernance du S.I</option>
                                 <option value="">Gestion de projet agile</option>
                                 <option value="">Gestion des Risques</option>
                             </select>
-                        </div>
-                    </md-list-item>
-                </md-list>
-                <md-list>
-                    <md-list-item>
-                        <div class="col-md-2" flex="20">Type :</div>
-                        <div class="col-md-9 justify">
-                            <select id="newSelectType" size="1" style="min-width: 200px" name="idType">
-                                <option value=""></option>
-                                <option value="test">Test</option>
-                                <option value="tp">TP</option>
-                                <option value="projet">Projet</option>
-                            </select>
-                        </div>
-                    </md-list-item>
-                </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Titre :</div>
-                            <div class="col-md-9 justify">
-                                <input id="newInputTitre" type="text" name="titreEvaluation" value="" style="width: 100%;">
                             </div>
                         </md-list-item>
                     </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Date :</div>
-                            <div class="col-md-9 justify">
-                                <input type="date" name="dateEvaluation" value="" style="width: 100%;">
-                            </div>
-                        </md-list-item>
                     </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">Note sur :</div>
-                            <div class="col-md-9 justify">
-                                <input id="newMaxEvaluation" type="number" name="maxEvaluation" min="5" value="20" style="width: 100%;">
-                            </div>
-                        </md-list-item>
-                    </md-list>
-                    <md-list>
-                        <md-list-item>
-                            <div class="col-md-2" flex="20">
-                                <input type="submit" id="submitButton" name="btSubmit" class="btn btn-success"value="Valider">
-                            </div>
-                           </md-list-item>
-                    </md-list>
-            </md-card-content>
+                    <input type="submit" class="btn btn-primary" id="btModif" name="modif" value="Modifier">&nbsp;&nbsp;
+                    <input type="submit" class="btn btn-primary" id="btCpt" name="cpt" value="Gestion des compétences">&nbsp;&nbsp;
+                    <input type="submit" class="btn btn-primary" id="btVerif" name="verif" value="Gestion des notes">
+                </md-card-content>
+            </md-card-header-text>
         </md-card>
+
     </form>
 </div>

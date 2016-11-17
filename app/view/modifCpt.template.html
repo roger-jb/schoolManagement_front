@@ -1,118 +1,9 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Evaluation</h3>
-    </div>
-    <div>
-        <a href="../Intranet/addEvaluation.php">Retour au choix d'&eacute;valuation</a>
+        <h3 class="centrer">Modification des compétences</h3>
     </div>
 
     <md-card>
-        <md-card-title>
-            Rappel Information sur l'évaluation
-        </md-card-title>
-        <input id="idEval" type="hidden" value="">
-
-        <md-card-content>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Date de l'évaluation </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" id="addDate" name="addDate" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Titre de l'évaluation </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" id="addTitre" name="addTitre" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Classe :  </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Module :  </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Type de l'évaluation :  </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Détail (Autre) :  </div>
-                    <div class="col-md-9 justify">
-                        <input id="contenu" type="text" name="autreEval" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20"> Note Max de l'évaluation </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" id="addMax" name="addMax" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20"> Sujet PDF : </div>
-                    <div class="col-md-9 justify">
-                        <!--
-                    <?php
-							if (file_exists('../Evaluation/Sujet'.$evaluation->getIdEvaluation().'.pdf')) {
-                    ?> -->
-                        <a href="../Evaluation/Sujet.pdf">Visualiser</a>
-                        <!--
-                    <?php
-							}
-							else{
-							?> -->
-                        Il n'y a pas de Sujet pour cette &eacute;valuation.
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20"> Correction PDF : </div>
-                    <div class="col-md-9 justify">
-                        <!--
-                    <?php
-							if (file_exists('../Evaluation/Corrige'.$evaluation->getIdEvaluation().'.pdf')){
-                    ?> -->
-                        <a href="../Evaluation/Corrige.pdf">Visualiser</a>
-                        <!--
-                        <?php
-                                }
-                                else {
-                                    ?> -->
-                        Il n'y a pas de Corrige pour cette &eacute;valuation.
-                    </div>
-                </md-list-item>
-            </md-list>
-        </md-card-content>
-    </md-card>
-
-    <md-card>
-        <md-card-title>
-            Gestion des compétences
-        </md-card-title>
-
         <md-card-content>
                 <md-list>
                     <md-list-item>
@@ -154,11 +45,5 @@
         </md-card-content>
     </md-card>
 
-    <md-card>
-        <md-card-title>
-            Liste des compétences
-        </md-card-title>
-        <ul id="listeCpt">
-        </ul>
-    </md-card>
+
 </div>

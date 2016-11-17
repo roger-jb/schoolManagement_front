@@ -1,148 +1,9 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Evaluation</h3>
+        <h3 class="centrer">Affectation d'une note</h3>
     </div>
-    <div>
-        <a href="../Intranet/addEvaluation.php">Retour au choix d'&eacute;valuation</a>
-    </div>
-    <div id="libRappelEval">Rappel des Informations sur l'évaluation</div>
 
     <md-card>
-        <md-card-title>
-            Rappel Information sur l'&eacute;valuation
-        </md-card-title>
-        <input id="idEval" type="hidden" value="">
-
-        <md-card-content>
-            
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Date de l'évaluation </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" id="addDate" name="addDate" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Titre de l'évaluation </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" id="addTitre" name="addTitre" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Classe : </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" readonly value=""/>
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Module : </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Type d'évaluation </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Détail (Autre) : </div>
-                    <div class="col-md-9 justify">
-                        <input id="contenu" type="text" name="autreEval" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Note Max de l'évaluation: </div>
-                    <div class="col-md-9 justify">
-                        <input type="text" id="addMax" name="addMax" readonly value="">
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Sujet PDF :</div>
-                    <div class="col-md-9 justify">
-                        <!--
-                    <?php
-							if (file_exists('../Evaluation/Sujet' . $evaluation->getIdEvaluation() . '.pdf')) {
-                    ?> -->
-                        <a href="../Evaluation/Sujet<?php echo $evaluation->getIdEvaluation() ?>.pdf">Visualiser</a>
-                        <!--
-                        <?php
-                                }
-                                else {
-                                    ?> -->
-                        Il n'y a pas de Sujet pour cette &eacute;valuation.
-                    </div>
-                </md-list-item>
-            </md-list>
-            <md-list>
-                <md-list-item>
-                    <div class="col-md-2" flex="20">Correction PDF :</div>
-                    <div class="col-md-9 justify">
-                        <!--
-                    <?php
-							if (file_exists('../Evaluation/Corrige' . $evaluation->getIdEvaluation() . '.pdf')) {
-                    ?> -->
-                        <a href="../Evaluation/Corrige<?php echo $evaluation->getIdEvaluation() ?>.pdf">Visualiser</a>
-
-                        <!--
-                        <?php
-                                }
-                                else {
-                                    ?> -->
-                        Il n'y a pas de Corrig&eacute; pour cette &eacute;valuation.
-                    </div>
-                </md-list-item>
-            </md-list>
-        </md-card-content>
-    </md-card>
-
-
-    <md-card>
-        <md-card-title>
-            Rappel des compétences
-        </md-card-title>
-
-        <md-card-content>
-            <thead>
-            <md-list-item>Racourci compétence</md-list-item>
-            <md-list-item>Domaine de compétence</md-list-item>
-            <md-list-item>Libellé de la compétence</md-list-item>
-            </thead>
-            <!--
-            <?php
-					$nbCpt      = 1;
-					$pointsCpts = PointCpt::getByEvaluation($evaluation->getIdEvaluation());
-            foreach ($pointsCpts as $pCpt) {
-            echo '<md-list><md-list-item>Cpt' . $nbCpt . '</md-list-item><md-list-item><input type="hidden" value="'.$pCpt->getIdPointCpt().'" id="idCpt'.$nbCpt.'" /></span>' . $pCpt->getLibellePointCpt() . '</md-list-item><md-list-item>' . $pCpt->getDomaineCpt()
-            ->getLibelleDomaineCpt() . '</md-list-item></md-list>';
-            $nbCpt++;
-            }
-            $nbCpt--;
-            ?> -->
-        </md-card-content>
-    </md-card>
-
-    <md-card>
-        <md-card-title>
-            Noter un étudiant
-            <input type="hidden" id="nbCpt" value=""/>
-        </md-card-title>
-
         <md-card-content>
             <md-list>
                 <md-list-item>
@@ -150,13 +11,10 @@
                     <div class="col-md-9 justify">
                         <select id="idEleveNote">
                             <option></option>
-                            <!--
-                            <?php
-                                    $allEleves = $evaluation->getEleves();
-                            foreach ($allEleves as $allE) {
-                            echo '<option value="' . $allE->getIdEleve() . '">' . $allE->getLibelleUtilisatur() . '</option>';
-                            }
-                            ?> -->
+                            <option value="">Reynard Jérémy</option>
+                            <option value="">Taïsse Sonia</option>
+                            <option value="">Sempé Jean-Baptiste</option>
+                            <option value="">Roger Jean-Baptiste</option>
                         </select>
                     </div>
                 </md-list-item>
@@ -171,40 +29,7 @@
             </md-list>
         </md-card-content>
     </md-card>
-
-    <md-card>
-
-        <md-card-title>
-            Notation des compétences
-        </md-card-title>
-
-        <md-card-content>
-            <md-list>
-                <!--
-                <?php
-						$noteCpt = 0;
-						while ($noteCpt < $nbCpt) {
-							echo '<md-list-item>cpt' . ($noteCpt + 1) . '</md-list-item>';
-                $noteCpt++;
-                }
-                ?> -->
-            </md-list>
-            <md-list>
-                <!--
-                <?php
-						$noteCpt = 0;
-						while ($noteCpt < $nbCpt) {
-							echo "<md-list-item><select id='evalCpt".($noteCpt+1)."'>" . $selectNiveauCpt . "</select></md-list-item>";
-                $noteCpt++;
-                }
-                ?> -->
-            </md-list>
-        </md-card-content>
-    </md-card>
-
-
     <input id="validation" type="button" value="Valider" class="btn btn-success">
-
 </div>
 <div style="clear: both"></div>
 </div>
