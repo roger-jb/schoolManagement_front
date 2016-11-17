@@ -1,24 +1,22 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Modification des compétences</h3>
+        <h3 class="centrer">Modifier une compétence</h3>
     </div>
 
     <md-card>
         <md-card-content>
                 <md-list>
                     <md-list-item>
-                        <div class="col-md-2" flex="20"> Domaine </div>
+                        <div class="col-md-2" flex="20"> Bloc : </div>
                         <div class="col-md-9 justify">
-                            <input type="text" id="txtDomaine" >
-                            <select id="selectDomaine">
-                                <option value=""></option>
-                                <!--
-                                <?php
-                                        $domaines = DomaineCpt::getByMatiere($evaluation->getMatiereNiveau()->getIdMatiere());
-                                foreach ($domaines as $domaine){
-                                echo "<option value='".$domaine->getIdDomaineCpt()."'>".$domaine->getLibelleDomaineCpt()."</option>";
-                                }
-                                ?> -->
+                            <select>
+                                <option value=''></option>
+                                <option>Bloc 1 : Fonction d’Encadrement</option>
+                                <option>Bloc 2 : Méthodes & Projets</option>
+                                <option>Bloc 3 : Gestion des Données & Business Intelligence</option>
+                                <option>Bloc 4 : Etudes & Développement</option>
+                                <option>Bloc 5 : Infrastructure Systèmes & Réseaux</option>
+                                <option>Bloc 6 : Management & Conseil ERP</option>
                             </select>
                         </div>
                     </md-list-item>
@@ -27,9 +25,31 @@
                     <md-list-item>
                         <div class="col-md-2" flex="20"> Compétences </div>
                         <div class="col-md-9 justify">
-                            <input type="text" id="txtCpt">
-                            <select id="selectCpt" name="selectCpt">
+                            <select>
                                 <option value=""></option>
+                                <optgroup label="1.1- Management du S.I"></optgroup>-->
+                                <option>&nbsp;&nbsp;Gouvernance du S.I</option>
+                                <option>&nbsp;&nbsp;Alignement stratégique du S.I</option>
+                                <option>&nbsp;&nbsp;Urbanisation du S.I</option>
+                                <option>&nbsp;&nbsp;Amélioration des processus</option>
+                                <option>&nbsp;&nbsp;Gestion de la sécurité des échanges</option>
+                                <option>&nbsp;&nbsp;Gestion de la sécurité des accès distants</option>
+                                <option>&nbsp;&nbsp;Gestion de la sécurité de l’information</option>
+                                <optgroup label="1.2- Management des ressources"></optgroup>-->
+                                <option>&nbsp;&nbsp;Gestion des moyens humains</option>
+                                <option>&nbsp;&nbsp;Organisation, animation et motivation d’une équipe</option>
+                                <option>&nbsp;&nbsp;Gestion de la Qualité</option>
+                                <option>&nbsp;&nbsp;Amélioration de la Qualité</option>
+                                <option>&nbsp;&nbsp;Gestion des contrats de service</option>
+                                <option>&nbsp;&nbsp;Choix d’une prestation de services</option>
+                                <optgroup label="1.3 – Ethique & Evolution du S.I"></optgroup>-->
+                                <option>&nbsp;&nbsp;Green IT</option>
+                                <option>&nbsp;&nbsp;Ethique & RSE</option>
+                                <option>&nbsp;&nbsp;Evolution du S.I</option>
+                                <option>&nbsp;&nbsp;Innovation S.I</option>
+                                <optgroup label="1.4 – Stratégie financière"></optgroup>-->
+                                <option>&nbsp;&nbsp;Gestion financière d’une activité informatique</option>
+                                <option>&nbsp;&nbsp;Analyse financière </option>
                             </select>
                         </div>
                     </md-list-item>
@@ -38,7 +58,7 @@
             <md-list>
                 <md-list-item>
                     <div class="col-md-2" flex="20">
-                        <input type="button" id="addCpt" class="btn btn-success" value="Ajouter" />
+                        <input type="button" id="addCpt" class="btn btn-success" value="Modifier" />
                     </div>
                 </md-list-item>
             </md-list>
