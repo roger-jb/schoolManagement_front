@@ -60,7 +60,7 @@
       },
       {
         title: 'Publication',
-        content: 'view/connexion.template.html',
+        content: 'view/addEvaluation.template.html',
         administrateur: true,
         professeur: true,
         responsable: true,
