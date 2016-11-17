@@ -6,8 +6,8 @@
   'use strict';
 
   angular
-  .module('EdeipExtranet')
-  .controller('MainController', MainController);
+    .module('EdeipExtranet')
+    .controller('MainController', MainController);
 
   function MainController($scope, $timeout) {
     $scope.sharedData = {};
@@ -17,30 +17,73 @@
 
     $scope.sharedData.conf.apiSrv = {
       protocole: 'http',
-      // name: 'roger-leoen.ddns.net',
-      name: 'localhost',
+      name: 'roger-leoen.ddns.net',
+      // name: 'localhost',
       // name: "192.168.10.49",
       port: '3000',
       baseURL: '/.'
     };
     $scope.sharedData.conf.apiAdress = $scope.sharedData.conf.apiSrv.protocole + '://' + $scope.sharedData.conf.apiSrv.name + ':' + $scope.sharedData.conf.apiSrv.port + $scope.sharedData.conf.apiSrv.baseURL;
     var tabs = [
-      {title: 'Connexion', content: 'view/connexion.template.html', administrateur: false, professeur:false, responsable: false, eleve:false},
+      {
+        title: 'Connexion',
+        content: 'view/connexion.template.html',
+        administrateur: false,
+        professeur: false,
+        responsable: false,
+        eleve: false
+      },
       // {title: 'Mon Profil', content: 'view/profil.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
-      {title: 'Administration', content: 'view/utilisateur.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
-      {title: 'Evaluation', content: 'view/carnetLiaison.template.html', administrateur: true, professeur:true, responsable: false, eleve:false},
-      {title: 'Cursus', content: 'view/cursus.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
-      {title: 'Publication', content: 'view/connexion.template.html', administrateur: true, professeur:true, responsable: true, eleve:true},
-      {title: 'Bulletin', content: 'view/connexion.template.html', administrateur: true, professeur:true, responsable: false, eleve:false}
+
+      {
+        title: 'Administration',
+        content: 'view/utilisateur.template.html',
+        administrateur: true,
+        professeur: false,
+        responsable: false,
+        eleve: false
+      },
+      {
+        title: 'Evaluation',
+        content: 'view/niveauCpt.template.html',
+        administrateur: true,
+        professeur: true,
+        responsable: false,
+        eleve: false
+      },
+      {
+        title: 'Cursus',
+        content: 'view/cursus.template.html',
+        administrateur: true,
+        professeur: false,
+        responsable: false,
+        eleve: false
+      },
+      {
+        title: 'Publication',
+        content: 'view/connexion.template.html',
+        administrateur: true,
+        professeur: true,
+        responsable: true,
+        eleve: true
+      },
+      {
+        title: 'Bulletin',
+        content: 'view/connexion.template.html',
+        administrateur: true,
+        professeur: true,
+        responsable: false,
+        eleve: false
+      }
     ];
 
     $scope.addTabs = function addTabs() {
       if ($scope.sharedData.utilisateur.id) {
-        tabs.forEach(function(tab){
-          if((tab.administrateur && ($scope.sharedData.utilisateur.administrateur !== null)) ||
+        tabs.forEach(function (tab) {
+          if ((tab.administrateur && ($scope.sharedData.utilisateur.administrateur !== null)) ||
             (tab.professeur && ($scope.sharedData.utilisateur.professeur !== null)) ||
             (tab.responsable && ($scope.sharedData.utilisateur.responsable !== null)) ||
-            (tab.eleve && ($scope.sharedData.utilisateur.eleve !== null))){
+            (tab.eleve && ($scope.sharedData.utilisateur.eleve !== null))) {
             addTab(tab);
           }
         });
@@ -54,7 +97,14 @@
         }
       });
       if (!exist) {
-        $scope.tabs[0] = {title: 'Mon Profil', content: 'view/profil.template.html'};
+        $scope.tabs[0] = {
+          title: 'Mon Profil',
+          content: 'view/profil.template.html',
+          administrateur: true,
+          professeur: true,
+          responsable: true,
+          eleve: true
+        };
         var newIndex = $scope.tabs.push(tab);
         $timeout(function () {
           $scope.selectedIndex = 0;
@@ -62,9 +112,15 @@
       }
     };
     $scope.tabs = [
-      {title: 'Connexion', content: 'view/connexion.template.html', administrateur: false, professeur:false, responsable: false, eleve:false}
+      {
+        title: 'Connexion',
+        content: 'view/connexion.template.html',
+        administrateur: false,
+        professeur: false,
+        responsable: false,
+        eleve: false
+      }
     ];
-
 
 
     $scope.tabs = tabs;
