@@ -183,7 +183,6 @@
 
             {
                 title: 'Bulletin',
-                content: 'view/getBulletin.template.html',
                 administrateur: true,
                 professeur: true,
                 responsable: false,
@@ -191,7 +190,7 @@
                 id:'bulletin',
                 sub: [{
                     title: 'Remplir',
-                    content: 'view/bulletinComment.template.html'
+                    content: 'view/getBulletin.template.html'
                 }],
             },
 
