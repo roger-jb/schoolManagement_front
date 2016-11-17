@@ -114,7 +114,7 @@
             {
                 title: 'Modules',
                 sub: [{
-                    title: 'Gestion des module',
+                    title: 'Gestion des modules',
                     content: 'view/module.template.html'
                 }, {
                     title: 'Modules étudiant',
@@ -169,9 +169,6 @@
                     title: 'Modifier',
                     content: 'view/modifCpt.template.html'
                 }, {
-                    title: 'Classes',
-                    content: 'view/niveauCpt.template.html'
-                }, {
                     title:'Consultation',
                     content: 'view/consultationCpt.template.html'
                     }],
@@ -197,7 +194,7 @@
             {
                 title: 'Espace entreprise',
                 sub: [{
-                    title: 'Consulter les notes de mes étudiants',
+                    title: 'Consulter les notes',
                     content: 'view/consultNoteCompetence.template.html'
                 },{
                     title: 'Sondage modules titre RNCP',
@@ -206,7 +203,7 @@
                 administrateur: true,
                 professeur: true,
                 responsable: true,
-                eleve: false
+                eleve: true
             }
         ];
 
