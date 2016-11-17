@@ -34,6 +34,7 @@
         eleve: false
       },
       // {title: 'Mon Profil', content: 'view/profil.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
+
       {
         title: 'Administration',
         content: 'view/utilisateur.template.html',

@@ -1,0 +1,218 @@
+<div id="corps">
+    <div class="titre_corps">
+        <h3 id="pageTitle" class="centrer">Cr&eacute;ation D'&Eacute;valuation</h3>
+    </div>
+   <!-- <?php
+			if ($utilisateur->estAdministrateur() || $utilisateur->estProfesseur() || $utilisateur->estResponsable()) {
+    ?>-->
+    <md-card>
+        <md-card-content>
+
+            <md-card-title>
+                Nouvelle évaluation
+            </md-card-title>
+
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Classe : </div>
+                    <div class="col-md-9 justify">
+                        <select id="selectNiveau" size="1" style="min-width: 200px">
+                            <option value=''></option>
+                            <optgroup label="Initial"></optgroup>-->
+                            <option>B1</option>
+                            <option>B2</option>
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
+                            <optgroup label="Alternant"></optgroup>-->
+                            <option>B3</option>
+                            <option>I4</option>
+                            <option>I5</option>
+                            <!--<?php
+                                        $niveaux = Niveau::getAll();
+                                        foreach ($niveaux as $niveau) {
+                                            echo '<option value="' . $niveau->getIdNiveau() . '">' . $niveau->getLibelleNiveau() . '</option>';
+                            }
+                            ?>-->
+                        </select>
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Module : </div>
+                    <div class="col-md-9 justify">
+                        <select id="selectMatiere" size="1" style="min-width: 200px">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </md-list-item>
+            </md-list>
+            <md-list>
+                <md-list-item>
+                    <div class="col-md-2" flex="20">Évaluation : </div>
+                    <div class="col-md-9 justify">
+                        <select id="selectEvaluation" size="1" style="min-width: 200px">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
+
+    <form method="POST" action="">
+        <input id="idUtilisateur" type="hidden" value="">
+        <md-card>
+            <md-card-content>
+                <md-list>
+                    <md-list-item><input id="newInputIdEvaluation" type="hidden" name="idEvaluation" value=""></md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Classe * : </div>
+                        <div class="col-md-9 justify">
+                            <select id="newSelectNiveau" size="1" style="min-width: 200px" name="idNiveau">
+                                <option value=''></option>
+                                <optgroup label="Initial"></optgroup>-->
+                                <option>B1</option>
+                                <option>B2</option>
+                                <option>B3</option>
+                                <option>I4</option>
+                                <option>I5</option>
+                                <optgroup label="Alternant"></optgroup>-->
+                                <option>B3</option>
+                                <option>I4</option>
+                                <option>I5</option>
+                                <!-- <?php
+                                             $niveaux = Niveau::getAll();
+                                             foreach ($niveaux as $niveau) {
+                                                 echo '<option value="' . $niveau->getIdNiveau() . '">' . $niveau->getLibelleNiveau() . '</option>';
+                                 }
+                                 ?>-->
+                            </select>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Module * : </div>
+                        <div class="col-md-9 justify">
+                            <select id="newSelectMatiere" size="1" style="min-width: 200px" name="idMatiere">
+                                <option value="Liste des modules"></option>
+                            </select>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Type d'évaluation * :</div>
+                        <div class="col-md-9 justify">
+                            <select id="newSelectType" size="1" style="min-width: 200px" name="idType">
+                                <option value="Type d'évalutation"></option>
+                                <!--<?php
+                                            $typeEvals = TypeEvaluation::getAll();
+                                            foreach ($typeEvals as $type) {
+                                                echo '<option value="' . $type->getIdTypeEvaluation() . '">' . $type->getLibelleTypeEvaluation() . '</option>';
+                                }
+                                ?>-->
+                            </select>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Autre * :</div>
+                        <div class="col-md-9 justify">
+                            <input id="newInputAutre" type="text" name="autreEvaluation" value="">
+                        </div>
+                    </md-list-item>
+                </md-list>
+                    <md-list>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Titre de l'évaluation :</div>
+                            <div class="col-md-9 justify">
+                                <input id="newInputTitre" type="text" name="titreEvaluation" value="" style="width: 100%;">
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                    <md-list>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Date de l'évaluation :</div>
+                            <div class="col-md-9 justify">
+                                <input id="newDateEvaluation" type="text" name="dateEvaluation" value="" style="width: 100%;">
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                    <md-list>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">Note sur :</div>
+                            <div class="col-md-9 justify">
+                                <input id="newMaxEvaluation" type="text" name="maxEvaluation" value="20" style="width: 100%;">
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                    <md-list>
+                        <md-list-item>
+                            <div class="col-md-2" flex="20">
+                                <input type="submit" id="submitButton" name="btSubmit" class="btn btn-success"value="Valider">
+                            </div>
+                           </md-list-item>
+                    </md-list>
+            </md-card-content>
+        </md-card>
+
+        <md-card>
+
+            <md-card-title>
+                Competences :
+            </md-card-title>
+
+            <md-card-content>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">Domaine :</div>
+                        <div class="col-md-9 justify">
+                            <input type="hidden" id="idDomaineCpt" name="idDomaineCpt" value="">
+                            <input type="text" id="libDomaineCpt" name="libDomaineCpt" value=""></br>
+                            <select>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20"> Compétence :</div>
+                        <div class="col-md-9 justify">
+                            <input type="hidden" id="idPointCpt" name="idPointCpt" value="">
+                            <input type="text" id="libPointCpt" name="libPointCpt" value=""></br>
+                            <select>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </md-list-item>
+                </md-list>
+                <md-list>
+                    <md-list-item>
+                        <div class="col-md-2" flex="20">
+                            <span id="ajoutCpt"><i class="fa fa-plus-square-o"
+                                                   style="font-size: 20px;"> Ajouter la compétence </span>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-card-content>
+        </md-card>
+
+        <md-card-content>
+            <thead>
+            <md-list-item>Domaine</md-list-item>
+            <md-list-item>Competence</md-list-item>
+            <md-list-item><span hidden id="nbCpt">0</span></md-list-item>
+            </thead>
+            <tbody id="listeCpt">
+            </tbody>
+        </md-card-content>
+        <input type="submit" class="btn btn-success" id="submitButtonAll" name="btSubmitAll" value="Valider tous les changements">
+    </form>
+</div>
