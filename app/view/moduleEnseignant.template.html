@@ -1,12 +1,23 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Affecter un module à un enseignant</h3>
+        <h3 class="centrer">Affectation d'un module à un enseignant</h3>
     </div>
 
     <md-card-content>
         <md-list>
             <md-list-item>
-                <div class="col-md-2" flex="20">Niveau : </div>
+                <div class="col-md-2" flex="20">Enseignant : </div>
+                <div class="col-md-9 justify">
+                    <select id="selectProf" size="1">
+                        <option value=""></option>
+                        <option>Bahri Emna</option>
+                        <option>Caillot Phillippe</option>
+                        <option>Reynier Richard</option>
+                    </select>
+                </div>
+            </md-list-item>
+            <md-list-item>
+                <div class="col-md-2" flex="20">Classe : </div>
                 <div class="col-md-9 justify">
                     <select id="selectNiveau" size="1" style="min-width: 200px">
                         <option value=""></option>
@@ -20,12 +31,6 @@
                         <option>B3</option>
                         <option>I4</option>
                         <option>I5</option>
-                        <!-- <?php
-                                 $niveaux = Niveau::getAll();
-                                 foreach ($niveaux as $niveau) {
-                                     echo '<option value="' . $niveau->getIdNiveau() . '">' . $niveau->getLibelleNiveau() . '</option>';
-                         }
-                         ?>-->
                     </select>
                 </div>
             </md-list-item>
@@ -34,54 +39,32 @@
                 <div class="col-md-9 justify">
                     <select id="selectMatiere" size="1">
                         <option value=""></option>
-                        <!--   <?php
-                                   $matieres = Matiere::getAll();
-                                   foreach ($matieres as $matiere){
-                                       echo '<option value="' . $matiere->getIdMatiere() . '">' . $matiere->getLibelleMatiere() . '</option>';
-                           }
-                           ?>-->
+                        <option value="">Qualité des données</option>
+                        <option value="">Lean management</option>
+                        <option value="">Projet ERP</option>
                     </select>
                 </div>
             </md-list-item>
         </md-list>
         <md-list>
             <md-list-item>
-                <div class="col-md-2" flex="20">Enseignant : </div>
-                <div class="col-md-9 justify">
-                    <select id="selectProf" size="1">
-                        <!--   <option value=""></option>
-                           <?php
-                                   $profs = Professeur::getAll();
-                                   foreach ($profs as $prof){
-                                       echo '<option value="' . $prof->getIdProfesseur() . '">' . $prof->getLibelleUtilisatur() . '</option>';
-                           }
-                           ?>-->
-                    </select>
-                </div>
-            </md-list-item>
-            <md-list-item>
                 <div class="col-md-2" flex="20">
                     <span id="addCouple"><button type="button" class="btn btn-success">Ajouter</button></span>
                     <span id="delCouple"><button type="button" class="btn btn-danger">Supprimer</button></span>
-                    <span id="updateCouple"><button type="button" class="btn btn-default">Changer enseignant </button></span>
                 </div>
             </md-list-item>
         </md-list>
     </md-card-content>
 
+    <div class="titre_corps">
+        <h3 class="centrer">Modules de l'enseignant</h3>
+    </div>
     <md-card>
-        <md-card-title>
-            Liste des modules assign&eacute;es au Niveau et leurs enseignants
-        </md-card-title>
         <md-card-content>
-            <thead>
             <md-list>
                 <md-list-item>Module</md-list-item>
                 <md-list-item>Enseignant</md-list-item>
             </md-list>
-            </thead>
-            <tbody id="listeCouple">
-            </tbody>
         </md-card-content>
     </md-card>
 </div>
