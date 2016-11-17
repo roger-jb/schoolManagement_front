@@ -10,21 +10,21 @@ const USERS = {
     administrateur: null,
     id: 1
   },
-  "Eleve" : {
+  "Etudiant" : {
     professeur: null,
     eleve: true,
     responsable: null,
     administrateur: null,
     id: 1
   },
-  "Responsable" : {
+  "Tuteur" : {
     professeur: null,
     eleve: null,
     responsable: true,
     administrateur: null,
     id: 1
   },
-  "Administrateur" : {
+  "Admin" : {
     professeur: null,
     eleve: null,
     responsable: null,

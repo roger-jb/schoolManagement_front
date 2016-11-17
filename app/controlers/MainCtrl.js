@@ -27,7 +27,6 @@
     var tabs = [
       {
         title: 'Connexion',
-        content: 'view/connexion.template.html',
         administrateur: false,
         professeur: false,
         responsable: false,
@@ -38,41 +37,61 @@
           content: 'view/connexion.template.html'
         }]
       },
-      // {title: 'Mon Profil', content: 'view/profil.template.html', administrateur: true, professeur:false, responsable: false, eleve:false},
-
-      /*      {
-       title: 'Administration',
-       content: 'view/utilisateur.template.html',
-       administrateur: true,
-       professeur: false,
-       responsable: false,
-       eleve: false
+      {
+         title: 'Administration',
+         administrateur: true,
+         professeur: false,
+         responsable: false,
+         eleve: false,
+         id : 'administration',
+         sub: [{
+          title: 'Utilisateur',
+          content: 'view/utilisateur.template.html'
+        }]
        },
        {
        title: 'Evaluation',
-       content: 'view/modifEval.template.html',
        administrateur: true,
        professeur: true,
        responsable: false,
-       eleve: false
+       eleve: false,
+         id : 'evaluation',
+         sub: [{
+           title: 'Ajouter',
+           content: 'view/addEvaluation.template.html'
+         }, {
+           title: 'Modifier',
+           content: 'view/modifEval.template.html'
+         },
+           {
+             title: 'Créer',
+             content: 'view/createEvaluation.template.html'
+           }],
        },
        {
        title: 'Cursus',
-       content: 'view/cursus.template.html',
        administrateur: true,
        professeur: false,
        responsable: false,
-       eleve: false
+       eleve: false,
+         id : 'cursus',
+         sub: [{
+           title: 'Cursus',
+           content: 'view/cursus.template.html'
+         }]
        },
        {
-
        title: 'Carnet de Liaison',
-       title: 'Publication',
        content: 'view/carnetLiaison.template.html',
        administrateur: true,
        professeur: true,
        responsable: true,
-       eleve: true
+       eleve: true,
+         id : 'carnetLiaison',
+         sub: [{
+           title: 'Carnet de Liaison',
+           content: 'view/carnetLiaison.template.html'
+         }]
        },
        {
        title: 'Bulletin',
@@ -80,11 +99,18 @@
        administrateur: true,
        professeur: true,
        responsable: false,
-       eleve: false
-       },*/
+       eleve: false,
+         sub: [{
+             title: 'Remplir',
+             content: 'view/bulletinComment.template.html'
+         }, {
+
+             title: 'Générer',
+             content: 'view/getBulletin.template.html'
+         }],
+       },
       {
         title: 'Compétences',
-        content: 'view/modifCpt.template.html',
         sub: [{
           title: 'Modifier',
           content: 'view/modifCpt.template.html'
@@ -96,7 +122,38 @@
         professeur: true,
         responsable: false,
         eleve: false
-      }
+      },
+        {
+            title: 'Note',
+            sub: [{
+                title: 'Affecter',
+                content: 'view/affectNote.template.html'
+            }, {
+                title: 'Consulter',
+                content: 'view/verifNote.template.html'
+            }],
+            administrateur: true,
+            professeur: true,
+            responsable: false,
+            eleve: false
+        },
+        {
+            title: 'Module',
+            sub: [{
+                title: 'Gestion des module',
+                content: 'view/module.template.html'
+            }, {
+                title: 'Affecter à un étudiant',
+                content: 'view/affectModule.template.html'
+            },{
+                title: 'Affecter à un enseignant',
+                content: 'view/moduleEnseignant.template.html'
+            }],
+            administrateur: true,
+            professeur: true,
+            responsable: false,
+            eleve: false
+        }
     ];
 
     $scope.addTabs = function addTabs() {
@@ -125,7 +182,12 @@
           administrateur: true,
           professeur: true,
           responsable: true,
-          eleve: true
+          eleve: true,
+            id : 'profil',
+            sub: [{
+                title: 'Mon profil',
+                content: 'view/profil.template.html'
+            }]
         };
         $scope.tabs = $scope.tabs.slice();
         var newIndex = $scope.tabs.push(tab);
