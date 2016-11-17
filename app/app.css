@@ -33,6 +33,10 @@
 .profil md-tabs-wrapper {
   display: none;
 }
+
+.bulletin md-tabs-wrapper {
+  display: none;
+}
 /*
 #tabContainer .btn.btn-success {
   background: white;

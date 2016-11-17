@@ -84,7 +84,7 @@
                     title: 'Utilisateurs',
                     content: 'view/utilisateur.template.html'
                 },{
-                    title: 'Niveaux',
+                    title: 'Classes',
                     content: 'view/niveau.template.html'
                 },
                     {
@@ -169,7 +169,7 @@
                     title: 'Modifier',
                     content: 'view/modifCpt.template.html'
                 }, {
-                    title: 'Niveaux',
+                    title: 'Classes',
                     content: 'view/niveauCpt.template.html'
                 }, {
                     title:'Consultation',
@@ -188,12 +188,10 @@
                 professeur: true,
                 responsable: false,
                 eleve: false,
+                id:'bulletin',
                 sub: [{
                     title: 'Remplir',
                     content: 'view/bulletinComment.template.html'
-                }, {
-                    title: 'Générer',
-                    content: 'view/getBulletin.template.html'
                 }],
             },
 
@@ -236,7 +234,7 @@
                 $scope.tabs[0] = {
                     title: 'Mon Profil',
                     content: 'view/profil.template.html',
-                    administrateur: true,
+                    administrateur: false,
                     professeur: true,
                     responsable: true,
                     eleve: true,
