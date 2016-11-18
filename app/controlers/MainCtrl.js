@@ -74,6 +74,19 @@
             },
 
             {
+                title: 'Mon Profil',
+                administrateur: false,
+                professeur: false,
+                responsable: false,
+                eleve: true,
+                id : 'profil',
+                sub: [{
+                    title: 'Mon Prifol',
+                    content: 'view/profil.template.html'
+                }]
+            },
+
+            {
                 title: 'Administration',
                 administrateur: true,
                 professeur: false,
@@ -224,15 +237,15 @@
             });
             if (!exist) {
                 $scope.tabs[0] = {
-                    title: 'Mon Profil',
-                    administrateur: false,
-                    professeur: false,
-                    responsable: false,
+                    title: 'Accueil',
+                    administrateur: true,
+                    professeur: true,
+                    responsable: true,
                     eleve: true,
                     id : 'profil',
                     sub: [{
-                        title: 'Mon profil',
-                        content: 'view/profil.template.html'
+                        title: 'Accueil',
+                        content: 'view/acceuil.template.html'
                     }]
                 };
                 $scope.tabs = $scope.tabs.slice();
