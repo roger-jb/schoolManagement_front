@@ -1,11 +1,11 @@
 <div id="corps">
     <div class="titre_corps">
-        <h3 class="centrer">Ajouter un utilisateur</h3>
+        <h3 class="centrer">Gestion des utilisateurs</h3>
     </div>
 
     <md-card flex="100">
         <form>
-            <md-card-content>
+            <md-card-content> Ajouter un utilisateur
                 <md-list>
                     <md-list-item>
                             <div class="col-md-2" flex="20"> Nom :</div>
@@ -87,4 +87,60 @@
             </form>
     </md-card>
 
+    <md-card flex="100">
+        <md-card-content> Liste des utilisateurs
+            <table id="mytable" class="table table-bordred table-striped">
+                <tr>
+                    <thead align="center">
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Adresse</th>
+                    <th>Code postal</th>
+                    <th>Ville</th>
+                    <th>Mail</th>
+                    <th>Fonction</th>
+                    <th>Date d'inscription</th>
+                    <th></th>
+                    </thead>
+                </tr>
+                <tbody>
+                <tr align="left">
+                    <td>Taïsse</td>
+                    <td>Sonia</td>
+                    <td>Lyon 09</td>
+                    <td>69009</td>
+                    <td>Lyon</td>
+                    <td>sonia-taisse@gmail.com</td>
+                    <td>Étudiant</td>
+                    <td>18/11/2016</td>
+                    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                </tr>
+
+                <tr align="left">
+                    <td>Sempé</td>
+                    <td>Jean-Baptiste</td>
+                    <td>Lyon 06</td>
+                    <td>69006</td>
+                    <td>Lyon</td>
+                    <td>jb-sempe@gmail.com</td>
+                    <td>Étudiant</td>
+                    <td>18/11/2016</td>
+                    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                </tr>
+
+                <tr align="left">
+                    <td>Reynard</td>
+                    <td>Jérémy</td>
+                    <td>rue Victor Hugo</td>
+                    <td>69270</td>
+                    <td>Fontaines</td>
+                    <td>jr-reynard@gmail.com</td>
+                    <td>Étudiant</td>
+                    <td>18/11/2016</td>
+                    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                </tr>
+                </tbody>
+            </table>
+        </md-card-content>
+    </md-card>
 </div>
