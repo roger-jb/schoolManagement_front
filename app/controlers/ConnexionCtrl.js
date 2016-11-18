@@ -3,14 +3,14 @@
  */
 
 const USERS = {
-  "Prof" : {
+  "Enseignant" : {
     professeur: true,
     eleve: null,
     responsable: null,
     administrateur: null,
     id: 1
   },
-  "Etudiant" : {
+  "REYNARD.Jeremy" : {
     professeur: null,
     eleve: true,
     responsable: null,
